@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -87,6 +88,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="RightBeat" sid="6237492510920623">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7259944065014391" speed="5">
+                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Speaker" sid="8265343883575788">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3519216787945583" speed="5">
+                    <frame duration="1" hotspotX="0.462025" hotspotY="0.491935" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gamepad" sid="3425648576929841">
+            <plugin id="gamepad" />
+        </object-type>
     </object-folder>
     <families>
         <family name="wave" plugin-id="Sprite" sid="7016592738157141">
@@ -100,6 +120,16 @@
                 <instance-variable name="color" sid="6648023818634191" type="number" />
             </instance-variables>
         </family>
+        <family name="Beat" plugin-id="Sprite" sid="2995050054729596">
+            <members>
+                <member>LeftBeat</member>
+                <member>RightBeat</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="direction" sid="9083484293584218" type="number" />
+                <instance-variable name="born" sid="1151882183936902" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
@@ -110,9 +140,15 @@
         <event-sheet>Constants.xml</event-sheet>
         <event-sheet>WaveCollision.xml</event-sheet>
         <event-sheet>Particles.xml</event-sheet>
+        <event-sheet>Beat.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="8" />
+        <global-instance type="Gamepad" uid="9">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder />

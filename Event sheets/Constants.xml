@@ -11,5 +11,8 @@
         <variable constant="1" name="BLUE" sid="9655305097666633" static="0" type="number">1</variable>
         <variable constant="1" name="RED" sid="6983180358596106" static="0" type="number">2</variable>
         <variable constant="1" name="GREY" sid="2055420662457843" static="0" type="number">3</variable>
+        <variable constant="0" name="BPM" sid="2870165079838719" static="0" type="number">120</variable>
+        <variable constant="0" name="BEAT_TRAVEL_DISTANCE" sid="5904182275670725" static="0" type="number">300</variable>
+        <variable constant="0" name="BEAT_SECONDS_TO_TAP" sid="6144342360674207" static="0" type="number">1</variable>
     </events>
 </c2eventsheet>

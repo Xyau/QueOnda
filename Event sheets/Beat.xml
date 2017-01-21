@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Beat</name>
+    <events>
+        <event-block sid="9380476388706522">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="776467551787088" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5214651496022462" type="Beat" />
+            </actions>
+        </event-block>
+        <event-block sid="8584686608288768">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5761882851288606" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="3553044216902048" type="Beat">
+                    <param id="0" name="X">(LayoutWidth/2)-Beat.direction*BEAT_TRAVEL_DISTANCE+Beat.direction*(time-Beat.born)/BEAT_SECONDS_TO_TAP*BEAT_TRAVEL_DISTANCE</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5215252445898389">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5882936192712067" type="System">
+                    <param id="0" name="Interval (seconds)">60/BPM</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3578182693651362" type="System">
+                    <param id="0" name="Object to create">LeftBeat</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">(LayoutWidth/2)-BEAT_TRAVEL_DISTANCE</param>
+                    <param id="3" name="Y">LayoutHeight-LeftBeat.Height/2</param>
+                </action>
+                <action id="-10" name="Set value" sid="8975973151428527" type="LeftBeat">
+                    <param id="0" name="Instance variable">born</param>
+                    <param id="1" name="Value">time</param>
+                </action>
+                <action id="-3" name="Create object" sid="3305266355499048" type="System">
+                    <param id="0" name="Object to create">RightBeat</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">(LayoutWidth/2)+BEAT_TRAVEL_DISTANCE</param>
+                    <param id="3" name="Y">LayoutHeight-RightBeat.Height/2</param>
+                </action>
+                <action id="-10" name="Set value" sid="5143691341363853" type="RightBeat">
+                    <param id="0" name="Instance variable">born</param>
+                    <param id="1" name="Value">time</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7992600800099642">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4329399797544844" type="LeftBeat">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth / 2 - LeftBeat.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1128612333272727" type="LeftBeat" />
+            </actions>
+        </event-block>
+        <event-block sid="5721506501829408">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="6204469430057349" type="RightBeat">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth / 2 + RightBeat.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9699811224353496" type="RightBeat" />
+            </actions>
+        </event-block>
+        <event-block sid="4606839952827268">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

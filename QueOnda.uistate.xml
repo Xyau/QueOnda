@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Layout 1</layout>
-        <layout order="1">Objects</layout>
-        <event-sheet order="2">Main</event-sheet>
-        <event-sheet order="3">Constants</event-sheet>
-        <event-sheet order="4">WaveCollision</event-sheet>
-        <event-sheet order="5">Particles</event-sheet>
+        <layout order="4">Layout 1</layout>
+        <layout order="0">Objects</layout>
+        <event-sheet order="5">Constants</event-sheet>
+        <event-sheet order="1">WaveCollision</event-sheet>
+        <event-sheet order="2">Particles</event-sheet>
+        <event-sheet active="1" order="3">Beat</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,6 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="1" name="wave" />
+        <family expanded="1" name="Beat" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -38,5 +39,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/waveP1/" />
         <folder expanded="1" path="animation-folder/waveP2/" />
         <folder expanded="1" path="animation-folder/LeftBeat/" />
+        <folder expanded="1" path="animation-folder/RightBeat/" />
+        <folder expanded="1" path="animation-folder/Speaker/" />
     </folders-expanded>
 </c2uistate>

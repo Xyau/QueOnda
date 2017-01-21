@@ -137,7 +137,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LeftBeat" uid="9">
+                <instance type="Speaker" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -147,14 +147,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>973</y>
+                        <x>964</x>
+                        <y>953</y>
                         <z>0</z>
-                        <width>65</width>
-                        <height>209</height>
+                        <width>158</width>
+                        <height>248</height>
                         <depth>0</depth>
-                        <hotspotX>0.465116292</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.462025315</hotspotX>
+                        <hotspotY>0.491935492</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
