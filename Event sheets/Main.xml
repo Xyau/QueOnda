@@ -3,10 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>Controls</include>
         <include>Wave</include>
         <include>Constants</include>
         <include>Particles</include>
-        <variable constant="1" name="SPRITEWIDTH" sid="3074272347455659" static="0" type="number">4</variable>
+        <include>Beat</include>
         <variable constant="0" name="sumOfWaves" sid="2915243126915155" static="0" type="number">0</variable>
         <event-block sid="6242094108479265">
             <conditions>
@@ -14,40 +15,45 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="8256648036357591" type="Text">
-                    <param id="0" name="Text">time</param>
+                    <param id="0" name="Text">fps</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8099667630002388">
+        <event-block sid="8171815475593653">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="7483711223070574" type="System" />
-                <condition id="-12" name="Repeat" sid="6387679966511324" type="System">
-                    <param id="0" name="Count">1600/SPRITEWIDTH</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="5472017023186007" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Create object" sid="8341996291341938" type="System">
-                    <param id="0" name="Object to create">Sprite</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">loopindex * SPRITEWIDTH + 200</param>
-                    <param id="3" name="Y">500</param>
+                <action id="0" name="Play" sid="3229999614540552" type="Audio">
+                    <param id="0" name="Audio file">pistas_juntas</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1694151668854688">
+        <event-block sid="5729219449808303">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="2379156970247542" type="System">
-                    <param id="0" name="Interval (seconds)">3</param>
+                <condition id="-4" name="Is outside layout" sid="1368019930034946" type="Wave" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8967899710917629" type="Wave" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8855254466060987">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="472430864167173" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="7946420683595777" type="Function">
-                    <param id="0" name="Name">&quot;newWave&quot;</param>
-                    <param id="1" name="Parameter {n}">PLAYER1{###}100{###}GREY</param>
-                </action>
-                <action id="0" name="Call function" sid="6918564035512915" type="Function">
+                <action id="0" name="Call function" sid="2909104467645589" type="Function">
                     <param id="0" name="Name">&quot;newWave&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER2{###}100{###}GREY</param>
+                </action>
+                <action id="0" name="Call function" sid="2265875173931342" type="Function">
+                    <param id="0" name="Name">&quot;newWave&quot;</param>
+                    <param id="1" name="Parameter {n}">PLAYER1{###}100{###}GREY</param>
                 </action>
             </actions>
         </event-block>

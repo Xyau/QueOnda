@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Beat</name>
+    <events>
+        <event-block sid="9348855277863665">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="902485509801874" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7308217635497462" type="Beat" />
+                <action id="-1" name="Set X" sid="4556628425608355" type="Speaker">
+                    <param id="0" name="X">LayoutWidth/2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3170965489970901">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="780970689517286" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="3748557024147106" type="Beat">
+                    <param id="0" name="X">(LayoutWidth/2)-Beat.direction*BEAT_TRAVEL_DISTANCE+Beat.direction*(time-Beat.born)/BEAT_SECONDS_TO_TAP*BEAT_TRAVEL_DISTANCE</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7565825845082226">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3879441511037013" type="System">
+                    <param id="0" name="Interval (seconds)">60/BPM</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="587222238385685" type="System">
+                    <param id="0" name="Object to create">LeftBeat</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">(LayoutWidth/2)-BEAT_TRAVEL_DISTANCE</param>
+                    <param id="3" name="Y">LayoutHeight-LeftBeat.Height/2</param>
+                </action>
+                <action id="-10" name="Set value" sid="9549592147369044" type="LeftBeat">
+                    <param id="0" name="Instance variable">born</param>
+                    <param id="1" name="Value">time</param>
+                </action>
+                <action id="-3" name="Create object" sid="3815354717435853" type="System">
+                    <param id="0" name="Object to create">RightBeat</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">(LayoutWidth/2)+BEAT_TRAVEL_DISTANCE</param>
+                    <param id="3" name="Y">LayoutHeight-RightBeat.Height/2</param>
+                </action>
+                <action id="-10" name="Set value" sid="679714180353679" type="RightBeat">
+                    <param id="0" name="Instance variable">born</param>
+                    <param id="1" name="Value">time</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1887701386655878">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="2942699969285231" type="LeftBeat">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth / 2 - LeftBeat.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8459321218813969" type="LeftBeat" />
+            </actions>
+        </event-block>
+        <event-block sid="4247039775023466">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="9191733673097621" type="RightBeat">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth / 2 + RightBeat.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8707267395954008" type="RightBeat" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

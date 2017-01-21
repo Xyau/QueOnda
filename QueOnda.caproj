@@ -11,9 +11,12 @@
     <saved-with-version>20900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -47,14 +50,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7517357510030916" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.75" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.75" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.75" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.75" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Array" sid="1900812227149269">
+        <object-type global="1" name="points" sid="1900812227149269">
             <plugin id="Arr" />
         </object-type>
         <object-type name="Text" sid="8561983506390302">
@@ -79,17 +82,98 @@
         <object-type name="Function" sid="309092327644415">
             <plugin id="Function" />
         </object-type>
-        <object-type name="LeftBeat" sid="5622631852262352">
+        <object-type name="Gamepad" sid="8781054433435433">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Speaker" sid="6187069353159898">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7880304055721183" speed="5">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8684436393983741" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\parlante.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\parlante2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="9163620566805179">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="LeftBeat" sid="7686192856083017">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6020422074969052" speed="0">
                     <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightBeat" sid="4322733585572825">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4780827049474921" speed="0">
+                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="rope" sid="1955407352681354">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Keyboard" sid="7774940204517306">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="LoadBar" sid="964082632459685">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="color" sid="2158154208720125" type="number" />
+                <instance-variable name="player" sid="6464453045094925" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Green" pingpong="0" repeatcount="1" repeatto="0" sid="4979703739346405" speed="0">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                </animation>
+                <animation framecount="11" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="3776567500918773" speed="0">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                </animation>
+                <animation framecount="11" loop="0" name="Blue" pingpong="0" repeatcount="1" repeatto="0" sid="4810394068058949" speed="0">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
     </object-folder>
     <families>
-        <family name="wave" plugin-id="Sprite" sid="7016592738157141">
+        <family name="Wave" plugin-id="Sprite" sid="7016592738157141">
             <members>
                 <member>waveP1</member>
                 <member>waveP2</member>
@@ -98,6 +182,16 @@
                 <instance-variable name="a" sid="7099921252000447" type="number" />
                 <instance-variable name="v" sid="7268083478766354" type="number" />
                 <instance-variable name="color" sid="6648023818634191" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Beat" plugin-id="Sprite" sid="3298709677011563">
+            <members>
+                <member>LeftBeat</member>
+                <member>RightBeat</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="direction" sid="7799359630345535" type="number" />
+                <instance-variable name="born" sid="8098814826948509" type="number" />
             </instance-variables>
         </family>
     </families>
@@ -110,11 +204,36 @@
         <event-sheet>Constants.xml</event-sheet>
         <event-sheet>Wave.xml</event-sheet>
         <event-sheet>Particles.xml</event-sheet>
+        <event-sheet>Beat.xml</event-sheet>
+        <event-sheet>Controls.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="8" />
+        <global-instance type="Gamepad" uid="10">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="9">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="pistas_juntas.m4a" />
+        <file name="pistas_juntas.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

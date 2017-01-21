@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Wave</name>
     <events>
+        <variable constant="0" name="whoWon" sid="8853127563185364" static="0" type="number">0</variable>
         <comment>Wave Coliding</comment>
         <event-block sid="6344625812342929">
             <conditions>
@@ -12,14 +13,13 @@
                 <condition id="-8" name="Compare two values" sid="3659295922975384" type="System">
                     <param id="0" name="First value">abs(waveP1.X - waveP2.X)</param>
                     <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Second value">3</param>
+                    <param id="2" name="Second value">10</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <variable constant="0" name="power1" sid="8994884855716182" static="0" type="number">0</variable>
                 <variable constant="0" name="power2" sid="4541181808175175" static="0" type="number">0</variable>
-                <variable constant="0" name="whoWon" sid="8853127563185364" static="0" type="number">0</variable>
                 <comment>2 waves are colliding</comment>
                 <event-block sid="4019151968686675">
                     <conditions />
@@ -66,6 +66,38 @@
                                 <action id="-10" name="Add to" sid="1931731184338984" type="System">
                                     <param id="0" name="Variable">power2</param>
                                     <param id="1" name="Value">WINBONUS * power2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block breakpoint="1" sid="5975101327224704">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7458231635356389" type="System" />
+                                <condition id="-14" name="Compare variable" sid="54739471752522" type="System">
+                                    <param id="0" name="Variable">whoWon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">FIRSTBYLANDSLIDE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="7711412158603967" type="System">
+                                    <param id="0" name="Variable">power2</param>
+                                    <param id="1" name="Value">WINBONUSBYLANDSLIDE * power2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block breakpoint="1" sid="9671703301123952">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6578886126349476" type="System" />
+                                <condition id="-14" name="Compare variable" sid="5879307086940338" type="System">
+                                    <param id="0" name="Variable">whoWon</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">SECONDBYLANDSLIDE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="1627831206043891" type="System">
+                                    <param id="0" name="Variable">power1</param>
+                                    <param id="1" name="Value">WINBONUSBYLANDSLIDE * power1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -163,11 +195,53 @@
                                     <param id="2" name="Value">GREY</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="237125729102483" type="Function">
-                                    <param id="0" name="Value">NONE</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8293332744601616">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6764904237993186" type="System">
+                                            <param id="0" name="Variable">color1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">GREY</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="5959397979182166" type="System">
+                                            <param id="0" name="Variable">color2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">GREY</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="8471514787551888" type="Function">
+                                            <param id="0" name="Value">NONE</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7821922988597238">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1507192742491971" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="826832310051896" type="System">
+                                            <param id="0" name="Variable">color1</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">GREY</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="6370731331433919" type="Function">
+                                            <param id="0" name="Value">FIRSTBYLANDSLIDE</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5034701255690172">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7387151394087482" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="2039077646750151" type="Function">
+                                            <param id="0" name="Value">SECONDBYLANDSLIDE</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="1685436336222094">
                             <conditions>

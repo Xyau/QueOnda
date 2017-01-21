@@ -11,10 +11,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Layout 1</layout>
+        <layout order="7">Objects</layout>
         <event-sheet active="1" order="1">Main</event-sheet>
         <event-sheet order="2">Constants</event-sheet>
         <event-sheet order="3">Wave</event-sheet>
-        <event-sheet order="4">Particles</event-sheet>
+        <event-sheet order="4">Controls</event-sheet>
+        <event-sheet order="5">Beat</event-sheet>
+        <event-sheet order="6">Particles</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,7 +26,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="wave" />
+        <family expanded="0" name="Wave" />
+        <family expanded="0" name="Beat" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -36,6 +40,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/waveP1/" />
         <folder expanded="1" path="animation-folder/waveP2/" />
+        <folder expanded="1" path="animation-folder/Speaker/" />
         <folder expanded="1" path="animation-folder/LeftBeat/" />
+        <folder expanded="1" path="animation-folder/RightBeat/" />
+        <folder expanded="1" path="animation-folder/LoadBar/" />
     </folders-expanded>
 </c2uistate>

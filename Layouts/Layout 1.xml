@@ -56,26 +56,21 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="waveP1" uid="0">
+                <instance type="Speaker" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <a>200</a>
-                        <v>10</v>
-                        <color>2</color>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-276</x>
-                        <y>100</y>
+                        <x>963</x>
+                        <y>961</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>256</width>
+                        <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -83,77 +78,157 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="waveP2" uid="3">
+                <instance type="LoadBar" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Green</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <a>-350</a>
-                        <v>-10</v>
-                        <color>2</color>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2325</x>
-                        <y>100</y>
-                        <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="waveP1" uid="7">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <a>200</a>
-                        <v>10</v>
                         <color>0</color>
+                        <player>0</player>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-696</x>
-                        <y>100</y>
+                        <x>233</x>
+                        <y>304</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>117</width>
+                        <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.504273534</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LeftBeat" uid="9">
+                <instance type="LoadBar" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Red</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <color>1</color>
+                        <player>0</player>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>973</y>
+                        <x>353</x>
+                        <y>303</y>
                         <z>0</z>
-                        <width>65</width>
-                        <height>209</height>
+                        <width>117</width>
+                        <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.465116292</hotspotX>
+                        <hotspotX>0.504273534</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LoadBar" uid="15">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Blue</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <color>2</color>
+                        <player>0</player>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>468</x>
+                        <y>308</y>
+                        <z>0</z>
+                        <width>117</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504273534</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LoadBar" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Green</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <color>0</color>
+                        <player>1</player>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1499</x>
+                        <y>309</y>
+                        <z>0</z>
+                        <width>117</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504273534</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LoadBar" uid="17">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Red</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <color>1</color>
+                        <player>1</player>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1619</x>
+                        <y>308</y>
+                        <z>0</z>
+                        <width>117</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504273534</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LoadBar" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Blue</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <color>2</color>
+                        <player>1</player>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1734</x>
+                        <y>313</y>
+                        <z>0</z>
+                        <width>117</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504273534</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -164,10 +239,17 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="Array" uid="1">
+        <instance type="points" uid="1">
             <properties>
-                <width>10</width>
-                <height>1</height>
+                <width>2</width>
+                <height>3</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="rope" uid="0">
+            <properties>
+                <width>500</width>
+                <height>2</height>
                 <depth>1</depth>
             </properties>
         </instance>
