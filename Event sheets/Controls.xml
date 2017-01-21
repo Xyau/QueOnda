@@ -71,6 +71,104 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="5103197707747446">
+            <conditions>
+                <condition id="3" name="Is button down" sid="6822279619977029" type="Gamepad">
+                    <param id="0" name="Gamepad">PLAYER1</param>
+                    <param id="1" name="Button">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="226140979602758" type="System">
+                    <param id="0" name="Variable">P1_POWER_ENABLED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2706672705415676">
+            <conditions>
+                <condition id="3" name="Is button down" sid="9869758907428706" type="Gamepad">
+                    <param id="0" name="Gamepad">PLAYER1</param>
+                    <param id="1" name="Button">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5229162132794678" type="System">
+                    <param id="0" name="Variable">P1_POWER_ENABLED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2072702136746278">
+            <conditions>
+                <condition id="3" name="Is button down" sid="6517285019672859" type="Gamepad">
+                    <param id="0" name="Gamepad">PLAYER1</param>
+                    <param id="1" name="Button">14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6894826006378069" type="System">
+                    <param id="0" name="Variable">P1_POWER_ENABLED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5344348846297426">
+            <conditions>
+                <condition id="3" name="Is button down" sid="1963142027313626" type="Gamepad">
+                    <param id="0" name="Gamepad">PLAYER2</param>
+                    <param id="1" name="Button">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3674293526798654" type="System">
+                    <param id="0" name="Variable">P2_POWER_ENABLED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4361063201832016">
+            <conditions>
+                <condition id="3" name="Is button down" sid="487606011659022" type="Gamepad">
+                    <param id="0" name="Gamepad">PLAYER2</param>
+                    <param id="1" name="Button">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7057217596993227" type="System">
+                    <param id="0" name="Variable">P2_POWER_ENABLED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1316313977584768">
+            <conditions>
+                <condition id="3" name="Is button down" sid="7960412926331957" type="Gamepad">
+                    <param id="0" name="Gamepad">PLAYER2</param>
+                    <param id="1" name="Button">14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2178529500800128" type="System">
+                    <param id="0" name="Variable">P2_POWER_ENABLED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8280676695079215">
+            <conditions>
+                <condition id="3" name="Is button down" sid="7258384885235567" type="Gamepad">
+                    <param id="0" name="Gamepad">PLAYER2</param>
+                    <param id="1" name="Button">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6394714338006664" type="System">
+                    <param id="0" name="Variable">P2_POWER_ENABLED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="7181546916381074">
             <conditions>
                 <condition id="5" name="Compare axis" sid="2620568841053997" type="Gamepad">
@@ -246,6 +344,10 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
+                                                                <action id="0" name="Call function" sid="8042287398635505" type="Function">
+                                                                    <param id="0" name="Name">&quot;addToColor&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                </action>
                                                                 <action id="0" name="Call function" sid="7603557427950041" type="Function">
                                                                     <param id="0" name="Name">&quot;releaseColor&quot;</param>
                                                                     <param id="1" name="Parameter {n}">PLAYER1{###}color</param>
@@ -253,6 +355,10 @@
                                                                 <action id="-9" name="Set value" sid="2006436834391579" type="System">
                                                                     <param id="0" name="Variable">P1_POWER_ENABLED</param>
                                                                     <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Add to" sid="1806191472341567" type="System">
+                                                                    <param id="0" name="Variable">P1_CCCOMBO</param>
+                                                                    <param id="1" name="Value">HYPE_PER_WAVE</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -269,6 +375,10 @@
                                                                     <param id="0" name="Name">&quot;addToColor&quot;</param>
                                                                     <param id="1" name="Parameter {n}">player{###}color</param>
                                                                 </action>
+                                                                <action id="-10" name="Add to" sid="877089945404699" type="System">
+                                                                    <param id="0" name="Variable">P1_CCCOMBO</param>
+                                                                    <param id="1" name="Value">HYPE_PER_BEAT</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -283,6 +393,10 @@
                                                         </action>
                                                         <action id="1" name="Set return value" sid="1236045034743878" type="Function">
                                                             <param id="0" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-11" name="Subtract from" sid="3379401411643406" type="System">
+                                                            <param id="0" name="Variable">P1_CCCOMBO</param>
+                                                            <param id="1" name="Value">HYPE_LOSS_PER_MISS</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -339,6 +453,10 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
+                                                                <action id="0" name="Call function" sid="8396935955918104" type="Function">
+                                                                    <param id="0" name="Name">&quot;addToColor&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                </action>
                                                                 <action id="0" name="Call function" sid="764274790316584" type="Function">
                                                                     <param id="0" name="Name">&quot;releaseColor&quot;</param>
                                                                     <param id="1" name="Parameter {n}">PLAYER2{###}color</param>
@@ -346,6 +464,10 @@
                                                                 <action id="-9" name="Set value" sid="8573965928142807" type="System">
                                                                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                                                                     <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Add to" sid="7263743044943806" type="System">
+                                                                    <param id="0" name="Variable">P2_CCCOMBO</param>
+                                                                    <param id="1" name="Value">HYPE_PER_WAVE</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -362,6 +484,10 @@
                                                                     <param id="0" name="Name">&quot;addToColor&quot;</param>
                                                                     <param id="1" name="Parameter {n}">player{###}color</param>
                                                                 </action>
+                                                                <action id="-10" name="Add to" sid="9614513674785928" type="System">
+                                                                    <param id="0" name="Variable">P2_CCCOMBO</param>
+                                                                    <param id="1" name="Value">HYPE_PER_BEAT</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -376,6 +502,10 @@
                                                         </action>
                                                         <action id="5" name="Set frame" sid="231922162244754" type="RightBeat">
                                                             <param id="0" name="Frame number">2</param>
+                                                        </action>
+                                                        <action id="-11" name="Subtract from" sid="6650135296003783" type="System">
+                                                            <param id="0" name="Variable">P2_CCCOMBO</param>
+                                                            <param id="1" name="Value">HYPE_LOSS_PER_MISS</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>

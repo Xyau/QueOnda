@@ -69,7 +69,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block breakpoint="1" sid="5975101327224704">
+                        <event-block sid="5975101327224704">
                             <conditions>
                                 <condition id="-22" name="Else" sid="7458231635356389" type="System" />
                                 <condition id="-14" name="Compare variable" sid="54739471752522" type="System">
@@ -85,7 +85,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block breakpoint="1" sid="9671703301123952">
+                        <event-block sid="9671703301123952">
                             <conditions>
                                 <condition id="-22" name="Else" sid="6578886126349476" type="System" />
                                 <condition id="-14" name="Compare variable" sid="5879307086940338" type="System">

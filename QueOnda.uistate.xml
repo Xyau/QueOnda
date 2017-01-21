@@ -11,23 +11,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Layout 1</layout>
-        <layout order="7">Objects</layout>
-        <event-sheet active="1" order="1">Main</event-sheet>
+        <event-sheet order="1">Controls</event-sheet>
         <event-sheet order="2">Constants</event-sheet>
-        <event-sheet order="3">Wave</event-sheet>
-        <event-sheet order="4">Controls</event-sheet>
-        <event-sheet order="5">Beat</event-sheet>
-        <event-sheet order="6">Particles</event-sheet>
+        <event-sheet active="1" order="3">Beat</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="1" name="Window Size" />
+        <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
         <family expanded="0" name="Wave" />
         <family expanded="0" name="Beat" />
+        <family expanded="0" name="Crowds" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -36,7 +33,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/waveP1/" />
         <folder expanded="1" path="animation-folder/waveP2/" />
@@ -44,5 +41,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LeftBeat/" />
         <folder expanded="1" path="animation-folder/RightBeat/" />
         <folder expanded="1" path="animation-folder/LoadBar/" />
+        <folder expanded="1" path="animation-folder/LeftCrowd/" />
+        <folder expanded="1" path="animation-folder/RightCrowd/" />
+        <folder expanded="1" path="animation-folder/Filter/" />
     </folders-expanded>
 </c2uistate>

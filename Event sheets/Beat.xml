@@ -3,6 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Beat</name>
     <events>
+        <variable constant="0" name="LAST_BEAT" sid="4473354801353608" static="0" type="number">0</variable>
+        <variable constant="0" name="P1_CCCOMBO" sid="3780573628555686" static="0" type="number">0</variable>
+        <variable constant="0" name="P2_CCCOMBO" sid="8298441220371384" static="0" type="number">0</variable>
+        <variable constant="0" name="BEATS_PASSED" sid="7195962741894071" static="0" type="number">0</variable>
         <event-block sid="9348855277863665">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="902485509801874" type="System" />
@@ -11,6 +15,14 @@
                 <action id="-9" name="Destroy" sid="7308217635497462" type="Beat" />
                 <action id="-1" name="Set X" sid="4556628425608355" type="Speaker">
                     <param id="0" name="X">LayoutWidth/2</param>
+                </action>
+                <action id="-3" name="Set position" sid="3751055060418018" type="Filter">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="2119677313762739" type="Filter">
+                    <param id="0" name="Width">LayoutWidth</param>
+                    <param id="1" name="Height">LayoutHeight</param>
                 </action>
             </actions>
         </event-block>
@@ -21,6 +33,12 @@
             <actions>
                 <action id="-1" name="Set X" sid="3748557024147106" type="Beat">
                     <param id="0" name="X">(LayoutWidth/2)-Beat.direction*BEAT_TRAVEL_DISTANCE+Beat.direction*(time-Beat.born)/BEAT_SECONDS_TO_TAP*BEAT_TRAVEL_DISTANCE</param>
+                </action>
+                <action id="-2" name="Set Y" sid="6592171647695274" type="LeftCrowd">
+                    <param id="0" name="Y">-(max(P1_CCCOMBO,0)/CROWD_EUPHORIC_THRESHOLD)*CROWD_MAX_JUMP*abs(sin(720*60/BPM*(time-LAST_BEAT)+180))+LayoutHeight-LeftCrowd.Height/2</param>
+                </action>
+                <action id="-2" name="Set Y" sid="6083738408791651" type="RightCrowd">
+                    <param id="0" name="Y">-(max(P2_CCCOMBO,0)/CROWD_EUPHORIC_THRESHOLD)*CROWD_MAX_JUMP*abs(sin(720*60/BPM*(time-LAST_BEAT)+180))+LayoutHeight-RightCrowd.Height/2</param>
                 </action>
             </actions>
         </event-block>
@@ -51,7 +69,79 @@
                     <param id="0" name="Instance variable">born</param>
                     <param id="1" name="Value">time</param>
                 </action>
+                <action id="-10" name="Add to" sid="5374928669822563" type="System">
+                    <param id="0" name="Variable">BEATS_PASSED</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6967350396664956" type="System">
+                    <param id="0" name="Variable">LAST_BEAT</param>
+                    <param id="1" name="Value">time</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="2157507668657917">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2287306889244889" type="System">
+                            <param id="0" name="First value">BEATS_PASSED % BEATS_PER_LIGHTS</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="0" name="Start timer" sid="9329483944720078" type="Filter">
+                            <param id="0" name="Duration">60/BPM</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;resetLightning&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="8137803383693741" type="Filter">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8808851731234657" type="System">
+                            <param id="0" name="Variable">P1_CCCOMBO</param>
+                            <param id="1" name="Value">max(P1_CCCOMBO,0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6716024981134657" type="System">
+                            <param id="0" name="Variable">P2_CCCOMBO</param>
+                            <param id="1" name="Value">max(P2_CCCOMBO,0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9925496034404207">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9541181670300652" type="System">
+                            <param id="0" name="First value">BEATS_PASSED % CROWD_HYPE_DECAY</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="0" name="Start timer" sid="221020388730987" type="Filter">
+                            <param id="0" name="Duration">60/BPM</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;resetLightning&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="5667822522505384" type="Filter">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5295680115439194" type="System">
+                            <param id="0" name="Variable">P1_CCCOMBO</param>
+                            <param id="1" name="Value">max(P1_CCCOMBO,0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3843423345534497" type="System">
+                            <param id="0" name="Variable">P2_CCCOMBO</param>
+                            <param id="1" name="Value">max(P2_CCCOMBO,0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3994160447487578">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="1192588677954131" type="System">
+                    <param id="0" name="Interval (seconds)">60/BPM</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
         <event-block sid="1887701386655878">
             <conditions>
@@ -73,6 +163,18 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="8707267395954008" type="RightBeat" />
+            </actions>
+        </event-block>
+        <event-block sid="451871675298312">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="3646706813878756" type="Filter">
+                    <param id="0" name="Tag">&quot;resetLightning&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1792418040069928" type="Filter">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

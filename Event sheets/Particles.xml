@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Particles</name>
     <events>
+        <variable constant="0" name="PARTICLESAMOUNT" sid="6206192621671322" static="0" type="number">0</variable>
         <variable constant="0" name="actual" sid="196670830104871" static="0" type="number">0</variable>
         <variable constant="0" name="OFFSET" sid="7066840133632328" static="0" type="number">200</variable>
         <variable constant="0" name="last" sid="6980087151407889" static="0" type="number">0</variable>
@@ -10,23 +11,40 @@
         <event-block sid="3622204279921302">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="5710230838097354" type="System" />
-                <condition id="-12" name="Repeat" sid="4697864093201263" type="System">
-                    <param id="0" name="Count">ROPELENGTH /SPRITEWIDTH</param>
-                </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Create object" sid="3933689937023137" type="System">
-                    <param id="0" name="Object to create">Sprite</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">loopindex * SPRITEWIDTH + OFFSET</param>
-                    <param id="3" name="Y">500</param>
+                <action id="-9" name="Set value" sid="5583023261857831" type="System">
+                    <param id="0" name="Variable">PARTICLESAMOUNT</param>
+                    <param id="1" name="Value">ROPELENGTH / SPRITEWIDTH</param>
+                </action>
+                <action id="1" name="Set size" sid="8069674438232468" type="rope">
+                    <param id="0" name="Width">PARTICLESAMOUNT</param>
+                    <param id="1" name="Height">2</param>
+                    <param id="2" name="Depth">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="3792939381111096">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="4697864093201263" type="System">
+                            <param id="0" name="Count">PARTICLESAMOUNT</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="3933689937023137" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">loopindex * SPRITEWIDTH + OFFSET</param>
+                            <param id="3" name="Y">500</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="4608214751595448">
             <conditions>
                 <condition id="-12" name="Repeat" sid="4671035376123359" type="System">
-                    <param id="0" name="Count">500</param>
+                    <param id="0" name="Count">PARTICLESAMOUNT</param>
                 </condition>
             </conditions>
             <actions>
@@ -72,7 +90,7 @@
                         <condition id="-8" name="Compare two values" sid="7680312159278372" type="System">
                             <param id="0" name="First value">last</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">500</param>
+                            <param id="2" name="Second value">PARTICLESAMOUNT</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="6021244850020917" type="System">
                             <param id="0" name="First value">actual</param>
