@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Particles</name>
+    <events>
+        <event-block sid="6282176644986633">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="182318763109185" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="1954809416087763" type="wave">
+                    <param id="0" name="X">wave.X  + wave.v</param>
+                </action>
+                <action id="5" name="Set frame" sid="9467154260067628" type="Sprite">
+                    <param id="0" name="Frame number">GREY</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8357843571010347">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8375798447847435" type="System">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="344696624787245" type="System">
+                            <param id="0" name="Variable">sumOfWaves</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="500601682448741">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="2510921346854868" type="System">
+                                    <param id="0" name="Object">wave</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="6581022042943454" type="System">
+                                    <param id="0" name="First value">180.</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">abs(wave.X-Sprite.X)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="2115851053274722" type="System">
+                                    <param id="0" name="Variable">sumOfWaves</param>
+                                    <param id="1" name="Value">wave.a * cos(wave.X - Sprite.X + 90)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="3073860722630424" type="Sprite">
+                                    <param id="0" name="Frame number">wave.color</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8174782525054732">
+                            <conditions />
+                            <actions>
+                                <action id="-2" name="Set Y" sid="1471031472936523" type="Sprite">
+                                    <param id="0" name="Y">500 + sumOfWaves</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Constants</name>
+    <events>
+        <variable constant="1" name="WINBONUS" sid="2973138580865081" static="0" type="number">0.2</variable>
+        <variable constant="1" name="FIRST" sid="8820065561625052" static="0" type="number">1</variable>
+        <variable constant="1" name="SECOND" sid="260458182461569" static="0" type="number">-1</variable>
+        <variable constant="1" name="NONE" sid="945999261124492" static="0" type="number">0</variable>
+        <variable constant="1" name="GREEN" sid="5680750671280659" static="0" type="number">0</variable>
+        <variable constant="1" name="BLUE" sid="9655305097666633" static="0" type="number">1</variable>
+        <variable constant="1" name="RED" sid="6983180358596106" static="0" type="number">2</variable>
+        <variable constant="1" name="GREY" sid="2055420662457843" static="0" type="number">3</variable>
+    </events>
+</c2eventsheet>
