@@ -3,16 +3,24 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Constants</name>
     <events>
+        <event-group description="" sid="703030546106101" title="COLISION" />
         <variable constant="1" name="WINBONUS" sid="2973138580865081" static="0" type="number">0.2</variable>
         <variable constant="1" name="FIRST" sid="8820065561625052" static="0" type="number">1</variable>
         <variable constant="1" name="SECOND" sid="260458182461569" static="0" type="number">-1</variable>
         <variable constant="1" name="NONE" sid="945999261124492" static="0" type="number">0</variable>
+        <event-group description="" sid="1763644819749057" title="COLORS" />
         <variable constant="1" name="GREEN" sid="5680750671280659" static="0" type="number">0</variable>
         <variable constant="1" name="BLUE" sid="9655305097666633" static="0" type="number">1</variable>
         <variable constant="1" name="RED" sid="6983180358596106" static="0" type="number">2</variable>
         <variable constant="1" name="GREY" sid="2055420662457843" static="0" type="number">3</variable>
-        <variable constant="0" name="BPM" sid="2870165079838719" static="0" type="number">120</variable>
-        <variable constant="0" name="BEAT_TRAVEL_DISTANCE" sid="5904182275670725" static="0" type="number">300</variable>
-        <variable constant="0" name="BEAT_SECONDS_TO_TAP" sid="6144342360674207" static="0" type="number">1</variable>
+        <event-group description="" sid="2969919983789248" title="WAVE" />
+        <variable constant="0" name="WAVEVELOCITY" sid="2780411750819717" static="0" type="number">3</variable>
+        <variable constant="0" name="WAVELENGTH" sid="4494662409655319" static="0" type="number">3</variable>
+        <event-group description="" sid="4396092792591215" title="POSITIONS" />
+        <variable constant="0" name="ORIGINP1" sid="9973346211508357" static="0" type="number">0</variable>
+        <variable constant="0" name="ORIGINP2" sid="9499454010281568" static="0" type="number">1920</variable>
+        <event-group description="" sid="1696942869459521" title="GENERAL" />
+        <variable constant="0" name="PLAYER1" sid="8667300325407529" static="0" type="number">0</variable>
+        <variable constant="0" name="PLAYER2" sid="2162649524051205" static="0" type="number">1</variable>
     </events>
 </c2eventsheet>

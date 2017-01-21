@@ -3,11 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
-        <include>Beat</include>
-        <include>WaveCollision</include>
+        <include>Wave</include>
         <include>Constants</include>
         <include>Particles</include>
-        <variable constant="1" name="SPRITEWIDTH" sid="3074272347455659" static="0" type="number">2</variable>
+        <variable constant="1" name="SPRITEWIDTH" sid="3074272347455659" static="0" type="number">4</variable>
         <variable constant="0" name="sumOfWaves" sid="2915243126915155" static="0" type="number">0</variable>
         <event-block sid="6242094108479265">
             <conditions>
@@ -15,7 +14,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="8256648036357591" type="Text">
-                    <param id="0" name="Text">fps</param>
+                    <param id="0" name="Text">time</param>
                 </action>
             </actions>
         </event-block>
@@ -23,7 +22,7 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7483711223070574" type="System" />
                 <condition id="-12" name="Repeat" sid="6387679966511324" type="System">
-                    <param id="0" name="Count">1500/SPRITEWIDTH</param>
+                    <param id="0" name="Count">1600/SPRITEWIDTH</param>
                 </condition>
             </conditions>
             <actions>
@@ -32,6 +31,23 @@
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">loopindex * SPRITEWIDTH + 200</param>
                     <param id="3" name="Y">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1694151668854688">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2379156970247542" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="7946420683595777" type="Function">
+                    <param id="0" name="Name">&quot;newWave&quot;</param>
+                    <param id="1" name="Parameter {n}">PLAYER1{###}100{###}GREY</param>
+                </action>
+                <action id="0" name="Call function" sid="6918564035512915" type="Function">
+                    <param id="0" name="Name">&quot;newWave&quot;</param>
+                    <param id="1" name="Parameter {n}">PLAYER2{###}100{###}GREY</param>
                 </action>
             </actions>
         </event-block>

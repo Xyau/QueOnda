@@ -65,17 +65,17 @@
                     </properties>
                     <instance-variables>
                         <a>200</a>
-                        <v>3</v>
-                        <color>0</color>
+                        <v>10</v>
+                        <color>2</color>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>431</x>
-                        <y>-144</y>
+                        <x>-276</x>
+                        <y>100</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>50</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -91,18 +91,18 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <a>-300</a>
-                        <v>-2</v>
+                        <a>-350</a>
+                        <v>-10</v>
                         <color>2</color>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1644</x>
-                        <y>-168</y>
+                        <x>2325</x>
+                        <y>100</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>50</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -119,17 +119,17 @@
                     </properties>
                     <instance-variables>
                         <a>200</a>
-                        <v>3</v>
+                        <v>10</v>
                         <color>0</color>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11</x>
-                        <y>-136</y>
+                        <x>-696</x>
+                        <y>100</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>50</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -137,7 +137,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Speaker" uid="11">
+                <instance type="LeftBeat" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -147,14 +147,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>964</x>
-                        <y>953</y>
+                        <x>32</x>
+                        <y>973</y>
                         <z>0</z>
-                        <width>158</width>
-                        <height>248</height>
+                        <width>65</width>
+                        <height>209</height>
                         <depth>0</depth>
-                        <hotspotX>0.462025315</hotspotX>
-                        <hotspotY>0.491935492</hotspotY>
+                        <hotspotX>0.465116292</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

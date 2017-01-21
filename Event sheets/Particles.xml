@@ -35,7 +35,7 @@
                                     <param id="0" name="Object">wave</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="6581022042943454" type="System">
-                                    <param id="0" name="First value">180.</param>
+                                    <param id="0" name="First value">180/WAVELENGTH</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Second value">abs(wave.X-Sprite.X)</param>
                                 </condition>
@@ -43,7 +43,7 @@
                             <actions>
                                 <action id="-10" name="Add to" sid="2115851053274722" type="System">
                                     <param id="0" name="Variable">sumOfWaves</param>
-                                    <param id="1" name="Value">wave.a * cos(wave.X - Sprite.X + 90)</param>
+                                    <param id="1" name="Value">wave.a * cos((wave.X - Sprite.X + 90)*WAVELENGTH)</param>
                                 </action>
                                 <action id="5" name="Set frame" sid="3073860722630424" type="Sprite">
                                     <param id="0" name="Frame number">wave.color</param>
