@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Splashs</name>
+    <events>
+        <event-block any="1" sid="3030197619715562">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="879712977626573" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="8815791272056735" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="6190995785281667" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="0" name="On click" sid="4619644447365242" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="3809251285847522" type="Splash">
+                    <param id="0" name="Frame number">Splash.AnimationFrame + 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6694805610960884">
+            <conditions>
+                <condition id="4" name="On finished" sid="5744566920027976" type="Splash">
+                    <param id="0" name="Animation">&quot;any&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6911296098039652" type="System">
+                    <param id="0" name="Layout">Launcher</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

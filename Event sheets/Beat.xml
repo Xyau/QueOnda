@@ -3,178 +3,279 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Beat</name>
     <events>
-        <variable constant="0" name="LAST_BEAT" sid="4473354801353608" static="0" type="number">0</variable>
-        <variable constant="0" name="P1_CCCOMBO" sid="3780573628555686" static="0" type="number">0</variable>
-        <variable constant="0" name="P2_CCCOMBO" sid="8298441220371384" static="0" type="number">0</variable>
-        <variable constant="0" name="BEATS_PASSED" sid="7195962741894071" static="0" type="number">0</variable>
-        <event-block sid="9348855277863665">
+        <variable constant="0" name="LAST_BEAT" sid="439536530080882" static="0" type="number">0</variable>
+        <variable constant="0" name="P1_CCCOMBO" sid="3418453739206002" static="0" type="number">0</variable>
+        <variable constant="0" name="P2_CCCOMBO" sid="9925832183351809" static="0" type="number">0</variable>
+        <variable constant="0" name="BEATS_PASSED" sid="1665131651980775" static="0" type="number">0</variable>
+        <variable constant="0" name="BEAT_DISTANCE" sid="4486992276209313" static="0" type="number">0</variable>
+        <variable constant="0" name="BEATOFFSET" sid="7644630335640479" static="0" type="number">-165</variable>
+        <variable constant="0" name="BEAT_VEL" sid="5502800452115391" static="0" type="number">0</variable>
+        <event-block sid="5182133287312175">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="902485509801874" type="System" />
+                <condition id="-2" name="On start of layout" sid="207314405377639" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="555918978507243" type="Ring">
+                    <param id="0" name="Instance variable">player</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">PLAYER1</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="7308217635497462" type="Beat" />
-                <action id="-1" name="Set X" sid="4556628425608355" type="Speaker">
+                <action id="-9" name="Destroy" sid="4694869752007131" type="Beat" />
+                <action id="-3" name="Set position" sid="3589729332946026" type="Speaker">
                     <param id="0" name="X">LayoutWidth/2</param>
+                    <param id="1" name="Y">LayoutHeight-Speaker.Height</param>
                 </action>
-                <action id="-3" name="Set position" sid="3751055060418018" type="Filter">
+                <action id="-3" name="Set position" sid="8608324681493156" type="Filter">
                     <param id="0" name="X">0</param>
                     <param id="1" name="Y">0</param>
                 </action>
-                <action id="-7" name="Set size" sid="2119677313762739" type="Filter">
+                <action id="-7" name="Set size" sid="6859828554242913" type="Filter">
                     <param id="0" name="Width">LayoutWidth</param>
                     <param id="1" name="Height">LayoutHeight</param>
                 </action>
+                <action id="-9" name="Set value" sid="265698231559916" type="System">
+                    <param id="0" name="Variable">BEAT_DISTANCE</param>
+                    <param id="1" name="Value">Ring.X+Beat.Width/2</param>
+                </action>
+                <action id="-9" name="Set value" sid="6880781431241314" type="System">
+                    <param id="0" name="Variable">BEAT_VEL</param>
+                    <param id="1" name="Value">1/(60/BPM * 5)*(BEAT_DISTANCE)</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="3170965489970901">
+        <event-block sid="6189588487252763">
             <conditions>
-                <condition id="-1" name="Every tick" sid="780970689517286" type="System" />
+                <condition id="-1" name="Every tick" sid="1246224171444334" type="System" />
             </conditions>
             <actions>
-                <action id="-1" name="Set X" sid="3748557024147106" type="Beat">
-                    <param id="0" name="X">(LayoutWidth/2)-Beat.direction*BEAT_TRAVEL_DISTANCE+Beat.direction*(time-Beat.born)/BEAT_SECONDS_TO_TAP*BEAT_TRAVEL_DISTANCE</param>
-                </action>
-                <action id="-2" name="Set Y" sid="6592171647695274" type="LeftCrowd">
+                <action id="-2" name="Set Y" sid="9067288643961919" type="LeftCrowd">
                     <param id="0" name="Y">-(max(P1_CCCOMBO,0)/CROWD_EUPHORIC_THRESHOLD)*CROWD_MAX_JUMP*abs(sin(720*60/BPM*(time-LAST_BEAT)+180))+LayoutHeight-LeftCrowd.Height/2</param>
                 </action>
-                <action id="-2" name="Set Y" sid="6083738408791651" type="RightCrowd">
+                <action id="-2" name="Set Y" sid="5456275189085694" type="RightCrowd">
                     <param id="0" name="Y">-(max(P2_CCCOMBO,0)/CROWD_EUPHORIC_THRESHOLD)*CROWD_MAX_JUMP*abs(sin(720*60/BPM*(time-LAST_BEAT)+180))+LayoutHeight-RightCrowd.Height/2</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="6414754930231489">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="613093598258877" type="Ring">
+                            <param id="0" name="Instance variable">player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">PLAYER1</param>
+                        </condition>
+                        <condition behavior="Physics" id="4" inverted="1" name="Is enabled" sid="9853284720416498" type="LeftBeat" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="5358876696994758" type="LeftBeat">
+                            <param id="0" name="X">(Ring.X -(LeftBeat.direction*(BEATOFFSET + BEAT_DISTANCE))+(LeftBeat.direction*(time-LeftBeat.born)*BEAT_VEL))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9648148714936147">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5502883398366701" type="Ring">
+                            <param id="0" name="Instance variable">player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">PLAYER2</param>
+                        </condition>
+                        <condition behavior="Physics" id="4" inverted="1" name="Is enabled" sid="5805279741048568" type="RightBeat" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="4158195387301138" type="RightBeat">
+                            <param id="0" name="X">(Ring.X -(RightBeat.direction*(BEATOFFSET + BEAT_DISTANCE))+(RightBeat.direction*(time-RightBeat.born)*BEAT_VEL))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="8303517610317078">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1888213392176746" type="System">
+                            <param id="0" name="First value">abs(time-LAST_BEAT - 60/BPM)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">BEAT_TOLERANCE</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="7299440155591543" type="System">
+                            <param id="0" name="First value">time-LAST_BEAT</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">BEAT_TOLERANCE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="1647547964031524" type="Hints">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6774442763165613">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3067088099840405" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="2746723953611464" type="Hints">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
-        <event-block sid="7565825845082226">
+        <event-block sid="9356275266954747">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="3879441511037013" type="System">
+                <condition id="-6" name="Every X seconds" sid="9041725052359882" type="System">
                     <param id="0" name="Interval (seconds)">60/BPM</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Create object" sid="587222238385685" type="System">
+                <action id="-3" name="Create object" sid="7713995581291358" type="System">
                     <param id="0" name="Object to create">LeftBeat</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">(LayoutWidth/2)-BEAT_TRAVEL_DISTANCE</param>
-                    <param id="3" name="Y">LayoutHeight-LeftBeat.Height/2</param>
+                    <param id="2" name="X">-LeftBeat.Width/2</param>
+                    <param id="3" name="Y">Ring.Y</param>
                 </action>
-                <action id="-10" name="Set value" sid="9549592147369044" type="LeftBeat">
+                <action id="-10" name="Set value" sid="3737883396163889" type="LeftBeat">
                     <param id="0" name="Instance variable">born</param>
                     <param id="1" name="Value">time</param>
                 </action>
-                <action id="-3" name="Create object" sid="3815354717435853" type="System">
+                <action id="-3" name="Create object" sid="5627485341528432" type="System">
                     <param id="0" name="Object to create">RightBeat</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">(LayoutWidth/2)+BEAT_TRAVEL_DISTANCE</param>
-                    <param id="3" name="Y">LayoutHeight-RightBeat.Height/2</param>
+                    <param id="2" name="X">(LayoutWidth+RightBeat.Width/2)</param>
+                    <param id="3" name="Y">Ring.Y</param>
                 </action>
-                <action id="-10" name="Set value" sid="679714180353679" type="RightBeat">
+                <action id="-10" name="Set value" sid="2904471463003556" type="RightBeat">
                     <param id="0" name="Instance variable">born</param>
                     <param id="1" name="Value">time</param>
                 </action>
-                <action id="-10" name="Add to" sid="5374928669822563" type="System">
+                <action id="-10" name="Add to" sid="5259130832132537" type="System">
                     <param id="0" name="Variable">BEATS_PASSED</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="6967350396664956" type="System">
+                <action id="-9" name="Set value" sid="1591727924458297" type="System">
                     <param id="0" name="Variable">LAST_BEAT</param>
                     <param id="1" name="Value">time</param>
                 </action>
+                <action id="5" name="Set frame" sid="8826293046593138" type="Background">
+                    <param id="0" name="Frame number">BEATS_PASSED % 2</param>
+                </action>
             </actions>
             <sub-events>
-                <event-block sid="2157507668657917">
+                <event-block sid="9257836690983775">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="830030058677844">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="2287306889244889" type="System">
+                        <condition id="-8" name="Compare two values" sid="7493054102322979" type="System">
                             <param id="0" name="First value">BEATS_PASSED % BEATS_PER_LIGHTS</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Timer" id="0" name="Start timer" sid="9329483944720078" type="Filter">
+                        <action behavior="Timer" id="0" name="Start timer" sid="605992171769242" type="Filter">
                             <param id="0" name="Duration">60/BPM</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;resetLightning&quot;</param>
                         </action>
-                        <action id="5" name="Set frame" sid="8137803383693741" type="Filter">
+                        <action id="5" name="Set frame" sid="236686825165397" type="Filter">
                             <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="8808851731234657" type="System">
-                            <param id="0" name="Variable">P1_CCCOMBO</param>
-                            <param id="1" name="Value">max(P1_CCCOMBO,0)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6716024981134657" type="System">
-                            <param id="0" name="Variable">P2_CCCOMBO</param>
-                            <param id="1" name="Value">max(P2_CCCOMBO,0)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9925496034404207">
+                <event-block sid="7513957042867208">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="9541181670300652" type="System">
+                        <condition id="-8" name="Compare two values" sid="3286803266283865" type="System">
                             <param id="0" name="First value">BEATS_PASSED % CROWD_HYPE_DECAY</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Timer" id="0" name="Start timer" sid="221020388730987" type="Filter">
-                            <param id="0" name="Duration">60/BPM</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;resetLightning&quot;</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="5667822522505384" type="Filter">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="5295680115439194" type="System">
+                        <action id="-9" name="Set value" sid="9950812580189494" type="System">
                             <param id="0" name="Variable">P1_CCCOMBO</param>
-                            <param id="1" name="Value">max(P1_CCCOMBO,0)</param>
+                            <param id="1" name="Value">max(P1_CCCOMBO-1,0)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="3843423345534497" type="System">
+                        <action id="-9" name="Set value" sid="4909692398758969" type="System">
                             <param id="0" name="Variable">P2_CCCOMBO</param>
-                            <param id="1" name="Value">max(P2_CCCOMBO,0)</param>
+                            <param id="1" name="Value">max(P2_CCCOMBO-1,0)</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="3994160447487578">
+        <event-block sid="7004430902141295">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="1192588677954131" type="System">
-                    <param id="0" name="Interval (seconds)">60/BPM</param>
+                <condition id="-7" name="Compare instance variable" sid="1126953122616197" type="Ring">
+                    <param id="0" name="Instance variable">player</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">PLAYER1</param>
                 </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="1887701386655878">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="2942699969285231" type="LeftBeat">
+                <condition id="-1" name="Compare X" sid="2958389508492293" type="LeftBeat">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">LayoutWidth / 2 - LeftBeat.Width</param>
+                    <param id="1" name="X co-ordinate">Ring.X +10</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="1089663156826147" type="LeftBeat">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">GREY</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="8459321218813969" type="LeftBeat" />
+                <action behavior="Physics" id="27" name="Set enabled" sid="5829306085070635" type="LeftBeat">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="3249831571669125" type="LeftBeat">
+                    <param id="0" name="Impulse X">0</param>
+                    <param id="1" name="Implulse Y">500</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="4247039775023466">
+        <event-block sid="9676826953268633">
             <conditions>
-                <condition id="-1" name="Compare X" sid="9191733673097621" type="RightBeat">
+                <condition id="-7" name="Compare instance variable" sid="7856956498785123" type="Ring">
+                    <param id="0" name="Instance variable">player</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">PLAYER2</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="8057252492099053" type="RightBeat">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">LayoutWidth / 2 + RightBeat.Width</param>
+                    <param id="1" name="X co-ordinate">Ring.X -10</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="6214717467134152" type="RightBeat">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">GREY</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="8707267395954008" type="RightBeat" />
+                <action behavior="Physics" id="27" name="Set enabled" sid="4043619308198967" type="RightBeat">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="1478761384696138" type="RightBeat">
+                    <param id="0" name="Impulse X">0</param>
+                    <param id="1" name="Implulse Y">500</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="451871675298312">
+        <event-block sid="50919266533244">
             <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="3646706813878756" type="Filter">
+                <condition behavior="Timer" id="0" name="On timer" sid="3555922081589367" type="Filter">
                     <param id="0" name="Tag">&quot;resetLightning&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="1792418040069928" type="Filter">
+                <action id="5" name="Set frame" sid="312132026992925" type="Filter">
                     <param id="0" name="Frame number">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="9033037903064309">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="7811208135874336" type="Beat">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">-100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3902122948516602" type="Beat" />
             </actions>
         </event-block>
     </events>

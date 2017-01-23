@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>Audio</include>
         <include>Controls</include>
         <include>Wave</include>
         <include>Constants</include>
@@ -17,18 +18,12 @@
                 <action id="0" name="Set text" sid="8256648036357591" type="Text">
                     <param id="0" name="Text">fps</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="8171815475593653">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="5472017023186007" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Play" sid="3229999614540552" type="Audio">
-                    <param id="0" name="Audio file">pistas_juntas</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="3896574882886884" type="Beat">
+                    <param id="0" name="Object">Beat</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="6" name="Stop" sid="5376662775400035" type="Audio">
+                    <param id="0" name="Tag">&quot;intro&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -56,6 +51,12 @@
                     <param id="1" name="Parameter {n}">PLAYER1{###}100{###}GREY</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="2518724444370874">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="8587084227442983" type="System" />
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

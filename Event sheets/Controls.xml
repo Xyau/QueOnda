@@ -5,45 +5,58 @@
     <events>
         <variable constant="0" name="P1_POWER_ENABLED" sid="4671047115434874" static="0" type="number">0</variable>
         <variable constant="0" name="P2_POWER_ENABLED" sid="9096401736833964" static="0" type="number">0</variable>
-        <event-block sid="1618927898908611">
+        <event-block sid="4499098634499652">
             <conditions>
-                <condition id="8" name="On any button pressed" sid="8771935074696614" type="Gamepad">
+                <condition id="-2" name="On start of layout" sid="3238762679248596" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="4785513011613546" type="System" />
+                <action id="0" name="Clear" sid="7227163603277978" type="points" />
+                <action id="0" name="Clear" sid="177420041382601" type="storedX" />
+                <action id="5" name="Set frame" sid="5453734223527999" type="LoadBar">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4774715037655315">
+            <conditions>
+                <condition id="8" name="On any button pressed" sid="5571258227617874" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER1</param>
                 </condition>
-                <condition id="-8" name="Compare two values" sid="3861453364906788" type="System">
+                <condition id="-8" name="Compare two values" sid="8665640062079676" type="System">
                     <param id="0" name="First value">Gamepad.LastButton(PLAYER1)</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Second value">3</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="2381575955621839" type="Function">
+                <action id="0" name="Call function" sid="6928528118461745" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER1{###}Gamepad.LastButton(PLAYER1)</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4360099128611766">
+        <event-block sid="6788130530557501">
             <conditions>
-                <condition id="8" name="On any button pressed" sid="6721386237226966" type="Gamepad">
+                <condition id="8" name="On any button pressed" sid="2430714102836192" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER2</param>
                 </condition>
-                <condition id="-8" name="Compare two values" sid="9680359932241407" type="System">
+                <condition id="-8" name="Compare two values" sid="9116227899841519" type="System">
                     <param id="0" name="First value">Gamepad.LastButton(PLAYER2)</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Second value">3</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="1022164138489397" type="Function">
+                <action id="0" name="Call function" sid="2879461444789573" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER2{###}Gamepad.LastButton(PLAYER2)</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7490489697470384">
+        <event-block sid="4218963775579075">
             <conditions>
-                <condition id="5" name="Compare axis" sid="6873448374422832" type="Gamepad">
+                <condition id="5" name="Compare axis" sid="2535257011022892" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER2</param>
                     <param id="1" name="Axis">1</param>
                     <param id="2" name="Comparison">3</param>
@@ -51,127 +64,127 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="2394877045663117" type="System">
+                <action id="-9" name="Set value" sid="4245720398973408" type="System">
                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="471154445620826">
+        <event-block sid="1790519470023403">
             <conditions>
-                <condition id="3" name="Is button down" sid="2479228958987276" type="Gamepad">
+                <condition id="6" name="On button pressed" sid="58227396138501" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER2</param>
                     <param id="1" name="Button">6</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="9322629149795185" type="System">
+                <action id="-9" name="Set value" sid="778505701309174" type="System">
                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5103197707747446">
+        <event-block sid="3653269430404109">
             <conditions>
-                <condition id="3" name="Is button down" sid="6822279619977029" type="Gamepad">
+                <condition id="3" name="Is button down" sid="4965704058497923" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER1</param>
                     <param id="1" name="Button">13</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="226140979602758" type="System">
+                <action id="-9" name="Set value" sid="4594518787289568" type="System">
                     <param id="0" name="Variable">P1_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2706672705415676">
+        <event-block sid="1691311853462732">
             <conditions>
-                <condition id="3" name="Is button down" sid="9869758907428706" type="Gamepad">
+                <condition id="3" name="Is button down" sid="4959041508908722" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER1</param>
                     <param id="1" name="Button">15</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="5229162132794678" type="System">
+                <action id="-9" name="Set value" sid="8409169679955802" type="System">
                     <param id="0" name="Variable">P1_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2072702136746278">
+        <event-block sid="2591384794285458">
             <conditions>
-                <condition id="3" name="Is button down" sid="6517285019672859" type="Gamepad">
+                <condition id="3" name="Is button down" sid="838044959473868" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER1</param>
                     <param id="1" name="Button">14</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="6894826006378069" type="System">
+                <action id="-9" name="Set value" sid="6386257868155907" type="System">
                     <param id="0" name="Variable">P1_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5344348846297426">
+        <event-block sid="4534578803716032">
             <conditions>
-                <condition id="3" name="Is button down" sid="1963142027313626" type="Gamepad">
+                <condition id="3" name="Is button down" sid="7068091613538523" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER2</param>
                     <param id="1" name="Button">13</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="3674293526798654" type="System">
+                <action id="-9" name="Set value" sid="6570836911722107" type="System">
                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4361063201832016">
+        <event-block sid="3295585953071932">
             <conditions>
-                <condition id="3" name="Is button down" sid="487606011659022" type="Gamepad">
+                <condition id="3" name="Is button down" sid="1997829497680136" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER2</param>
                     <param id="1" name="Button">15</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="7057217596993227" type="System">
+                <action id="-9" name="Set value" sid="7577084145500174" type="System">
                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1316313977584768">
+        <event-block sid="6330212159070157">
             <conditions>
-                <condition id="3" name="Is button down" sid="7960412926331957" type="Gamepad">
+                <condition id="3" name="Is button down" sid="5077760039293847" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER2</param>
                     <param id="1" name="Button">14</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="2178529500800128" type="System">
+                <action id="-9" name="Set value" sid="9750399064933506" type="System">
                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="8280676695079215">
+        <event-block sid="7364523784454301">
             <conditions>
-                <condition id="3" name="Is button down" sid="7258384885235567" type="Gamepad">
+                <condition id="3" name="Is button down" sid="9943376575872548" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER2</param>
                     <param id="1" name="Button">6</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="6394714338006664" type="System">
+                <action id="-9" name="Set value" sid="6488990182419089" type="System">
                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7181546916381074">
+        <event-block sid="5968954415404558">
             <conditions>
-                <condition id="5" name="Compare axis" sid="2620568841053997" type="Gamepad">
+                <condition id="5" name="Compare axis" sid="2707947012505203" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER1</param>
                     <param id="1" name="Axis">1</param>
                     <param id="2" name="Comparison">3</param>
@@ -179,81 +192,81 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="2637693268868629" type="System">
+                <action id="-9" name="Set value" sid="7413406593714576" type="System">
                     <param id="0" name="Variable">P1_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4362571539379936">
+        <event-block sid="4012975723553942">
             <conditions>
-                <condition id="3" name="Is button down" sid="3413874986622331" type="Gamepad">
+                <condition id="3" name="Is button down" sid="9664807504551352" type="Gamepad">
                     <param id="0" name="Gamepad">PLAYER1</param>
                     <param id="1" name="Button">6</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="5795388746414979" type="System">
+                <action id="-9" name="Set value" sid="453964641133469" type="System">
                     <param id="0" name="Variable">P1_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
         <comment>Recieves player and color to add 1 if possible</comment>
-        <event-block sid="5325086630493628">
+        <event-block sid="3596861942481952">
             <conditions>
-                <condition id="0" name="On function" sid="6751333558831857" type="Function">
+                <condition id="0" name="On function" sid="9480100235371367" type="Function">
                     <param id="0" name="Name">&quot;addToColor&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="player" sid="2387800758398831" static="0" type="number">0</variable>
-                <variable constant="0" name="color" sid="5312541990520844" static="0" type="number">0</variable>
-                <event-block sid="59012354086367">
+                <variable constant="0" name="player" sid="625413219081712" static="0" type="number">0</variable>
+                <variable constant="0" name="color" sid="2694786372411503" static="0" type="number">0</variable>
+                <event-block sid="2395371747828185">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" sid="2216821949093006" type="System">
+                        <action id="-9" name="Set value" sid="1462911556124076" type="System">
                             <param id="0" name="Variable">player</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="4457213525750687" type="System">
+                        <action id="-9" name="Set value" sid="4207520364887068" type="System">
                             <param id="0" name="Variable">color</param>
                             <param id="1" name="Value">Function.Param(1)</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="7092476161079611">
+                        <event-block sid="4947013011548832">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="5794301969010497" type="System">
+                                <condition id="-8" name="Compare two values" sid="7606501863934787" type="System">
                                     <param id="0" name="First value">color</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">3</param>
                                 </condition>
-                                <condition id="1" name="Compare at XY" sid="8886543096682066" type="points">
+                                <condition id="1" name="Compare at XY" sid="8782380751797149" type="points">
                                     <param id="0" name="X">player</param>
                                     <param id="1" name="Y">color</param>
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">MAXIMUNBEATS</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="5659464973610315" type="LoadBar">
+                                <condition id="-7" name="Compare instance variable" sid="1404795442994837" type="LoadBar">
                                     <param id="0" name="Instance variable">color</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">color</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="3764428787342987" type="LoadBar">
+                                <condition id="-7" name="Compare instance variable" sid="8382804150517549" type="LoadBar">
                                     <param id="0" name="Instance variable">player</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">player</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set at XY" sid="962094159873183" type="points">
+                                <action id="3" name="Set at XY" sid="298797448424671" type="points">
                                     <param id="0" name="X">player</param>
                                     <param id="1" name="Y">color</param>
                                     <param id="2" name="Value">points.At(player,color) + 1</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="2629129636525555" type="LoadBar">
+                                <action id="5" name="Set frame" sid="9284674459839704" type="LoadBar">
                                     <param id="0" name="Frame number">points.At(player,color)</param>
                                 </action>
                             </actions>
@@ -263,32 +276,32 @@
             </sub-events>
         </event-block>
         <comment>BeatStrike recieves player and color</comment>
-        <event-block sid="4024793257224786">
+        <event-block sid="2401564702346703">
             <conditions>
-                <condition id="0" name="On function" sid="9713258757558919" type="Function">
+                <condition id="0" name="On function" sid="3245731708235301" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="player" sid="8913468936774693" static="0" type="number">0</variable>
-                <variable constant="0" name="color" sid="523307182658556" static="0" type="number">0</variable>
-                <event-block sid="8146416799160978">
+                <variable constant="0" name="player" sid="4936784991539125" static="0" type="number">0</variable>
+                <variable constant="0" name="color" sid="825956774380239" static="0" type="number">0</variable>
+                <event-block sid="8578379156842217">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" sid="8940095939170961" type="System">
+                        <action id="-9" name="Set value" sid="8309346509620903" type="System">
                             <param id="0" name="Variable">player</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="5361886754901194" type="System">
+                        <action id="-9" name="Set value" sid="6426665647130075" type="System">
                             <param id="0" name="Variable">color</param>
                             <param id="1" name="Value">Function.Param(1)</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="9961387458497275">
+                        <event-block sid="628592563883065">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="4079886387764642" type="System">
+                                <condition id="-8" name="Compare two values" sid="6630681468225374" type="System">
                                     <param id="0" name="First value">color</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">3</param>
@@ -296,9 +309,9 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="2551757460121689">
+                                <event-block sid="5073926010079289">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="7585757853455376" type="System">
+                                        <condition id="-14" name="Compare variable" sid="2495363190711034" type="System">
                                             <param id="0" name="Variable">player</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">PLAYER1</param>
@@ -306,108 +319,152 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="9916253650979976">
+                                        <event-block sid="8031070380132006">
                                             <conditions>
-                                                <condition id="-15" name="Pick nearest/furthest" sid="7286404738911914" type="LeftBeat">
+                                                <condition behavior="Physics" id="4" inverted="1" name="Is enabled" sid="3080963336274876" type="LeftBeat" />
+                                                <condition id="-15" name="Pick nearest/furthest" sid="4935070755507655" type="LeftBeat">
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="X">Speaker.X</param>
                                                     <param id="2" name="Y">Speaker.Y</param>
                                                 </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="8390702846431157" type="LeftBeat">
+                                                    <param id="0" name="Object">Ring</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="1561694583926188">
-                                                    <conditions>
-                                                        <condition id="3" name="Compare frame" sid="6738207968448626" type="LeftBeat">
-                                                            <param id="0" name="Comparison">0</param>
-                                                            <param id="1" name="Number">0</param>
-                                                        </condition>
-                                                        <condition id="1" name="Is overlapping another object" sid="4972325104729528" type="LeftBeat">
-                                                            <param id="0" name="Object">Speaker</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="1" name="Set return value" sid="6328093241988973" type="Function">
-                                                            <param id="0" name="Value">1</param>
-                                                        </action>
-                                                        <action id="5" name="Set frame" sid="7933828641289474" type="LeftBeat">
-                                                            <param id="0" name="Frame number">1</param>
-                                                        </action>
-                                                    </actions>
+                                                <event-block sid="6351194145248115">
+                                                    <conditions />
+                                                    <actions />
                                                     <sub-events>
-                                                        <event-block sid="9929665903720086">
+                                                        <event-block any="1" sid="5764286249242823">
                                                             <conditions>
-                                                                <condition id="-14" name="Compare variable" sid="8048607073054874" type="System">
-                                                                    <param id="0" name="Variable">P1_POWER_ENABLED</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">1</param>
+                                                                <condition id="-8" name="Compare two values" sid="9935683278652958" type="System">
+                                                                    <param id="0" name="First value">abs(time-LAST_BEAT - 60/BPM)</param>
+                                                                    <param id="1" name="Comparison">3</param>
+                                                                    <param id="2" name="Second value">BEAT_TOLERANCE</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="3077321599847182" type="System">
+                                                                    <param id="0" name="First value">time-LAST_BEAT</param>
+                                                                    <param id="1" name="Comparison">3</param>
+                                                                    <param id="2" name="Second value">BEAT_TOLERANCE</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="0" name="Call function" sid="8042287398635505" type="Function">
-                                                                    <param id="0" name="Name">&quot;addToColor&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                <action id="1" name="Set return value" sid="2335037699182424" type="Function">
+                                                                    <param id="0" name="Value">1</param>
                                                                 </action>
-                                                                <action id="0" name="Call function" sid="7603557427950041" type="Function">
-                                                                    <param id="0" name="Name">&quot;releaseColor&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">PLAYER1{###}color</param>
+                                                                <action id="5" name="Set frame" sid="2631598871248332" type="LeftBeat">
+                                                                    <param id="0" name="Frame number">color</param>
                                                                 </action>
-                                                                <action id="-9" name="Set value" sid="2006436834391579" type="System">
-                                                                    <param id="0" name="Variable">P1_POWER_ENABLED</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-10" name="Add to" sid="1806191472341567" type="System">
-                                                                    <param id="0" name="Variable">P1_CCCOMBO</param>
-                                                                    <param id="1" name="Value">HYPE_PER_WAVE</param>
+                                                                <action id="0" name="Call function" sid="2780065722854387" type="Function">
+                                                                    <param id="0" name="Name">&quot;animateToFill&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">LeftBeat.UID{###}PLAYER1</param>
                                                                 </action>
                                                             </actions>
+                                                            <sub-events>
+                                                                <event-block any="1" sid="7677777545478393">
+                                                                    <conditions>
+                                                                        <condition id="3" name="Is button down" sid="9970741044704375" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER1</param>
+                                                                            <param id="1" name="Button">6</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="8110620802779098" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER1</param>
+                                                                            <param id="1" name="Button">7</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="3862758778307949" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER1</param>
+                                                                            <param id="1" name="Button">12</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="1752812229327165" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER1</param>
+                                                                            <param id="1" name="Button">13</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="7725416174465366" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER1</param>
+                                                                            <param id="1" name="Button">14</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="5372185494813327" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER1</param>
+                                                                            <param id="1" name="Button">15</param>
+                                                                        </condition>
+                                                                        <condition id="2" name="Key is down" sid="4996324866774551" type="Keyboard">
+                                                                            <param id="0" name="Key">32 (Space)</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="1665378524738952" type="Function">
+                                                                            <param id="0" name="Name">&quot;addToColor&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                        </action>
+                                                                        <action id="0" name="Call function" sid="6693039243536478" type="Function">
+                                                                            <param id="0" name="Name">&quot;releaseColor&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">PLAYER1{###}color</param>
+                                                                        </action>
+                                                                        <action id="-9" name="Set value" sid="1128995972215859" type="System">
+                                                                            <param id="0" name="Variable">P1_POWER_ENABLED</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Add to" sid="3200816188381904" type="System">
+                                                                            <param id="0" name="Variable">P1_CCCOMBO</param>
+                                                                            <param id="1" name="Value">HYPE_PER_WAVE</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="7303617602171703">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="6719074513375205" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="1461091851780127" type="Function">
+                                                                            <param id="0" name="Name">&quot;newWave&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">PLAYER1{###}100{###}GREY</param>
+                                                                        </action>
+                                                                        <action id="0" name="Call function" sid="9443314421830906" type="Function">
+                                                                            <param id="0" name="Name">&quot;addToColor&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Add to" sid="8175471635883085" type="System">
+                                                                            <param id="0" name="Variable">P1_CCCOMBO</param>
+                                                                            <param id="1" name="Value">HYPE_PER_BEAT</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
-                                                        <event-block sid="7106747564132743">
+                                                        <event-block sid="4354652239827329">
                                                             <conditions>
-                                                                <condition id="-22" name="Else" sid="5022984662771934" type="System" />
+                                                                <condition id="-22" name="Else" sid="2403625709574205" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="0" name="Call function" sid="7288245928403153" type="Function">
-                                                                    <param id="0" name="Name">&quot;newWave&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">PLAYER1{###}100{###}GREY</param>
+                                                                <action behavior="Physics" id="27" name="Set enabled" sid="4413192875110776" type="LeftBeat">
+                                                                    <param id="0" name="Mode">1</param>
                                                                 </action>
-                                                                <action id="0" name="Call function" sid="3614470911294148" type="Function">
-                                                                    <param id="0" name="Name">&quot;addToColor&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                <action id="1" name="Set return value" sid="6151683056172921" type="Function">
+                                                                    <param id="0" name="Value">0</param>
                                                                 </action>
-                                                                <action id="-10" name="Add to" sid="877089945404699" type="System">
+                                                                <action id="-11" name="Subtract from" sid="8509349242493113" type="System">
                                                                     <param id="0" name="Variable">P1_CCCOMBO</param>
-                                                                    <param id="1" name="Value">HYPE_PER_BEAT</param>
+                                                                    <param id="1" name="Value">HYPE_LOSS_PER_MISS</param>
+                                                                </action>
+                                                                <action behavior="Physics" id="3" name="Apply impulse" sid="6073839912949472" type="LeftBeat">
+                                                                    <param id="0" name="Impulse X">0</param>
+                                                                    <param id="1" name="Implulse Y">5000</param>
+                                                                    <param id="2" name="Image point">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
-                                                <event-block sid="204650805335758">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="7402834424957798" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="5" name="Set frame" sid="6463872347168938" type="LeftBeat">
-                                                            <param id="0" name="Frame number">2</param>
-                                                        </action>
-                                                        <action id="1" name="Set return value" sid="1236045034743878" type="Function">
-                                                            <param id="0" name="Value">0</param>
-                                                        </action>
-                                                        <action id="-11" name="Subtract from" sid="3379401411643406" type="System">
-                                                            <param id="0" name="Variable">P1_CCCOMBO</param>
-                                                            <param id="1" name="Value">HYPE_LOSS_PER_MISS</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="2147607054028171">
+                                <event-block sid="8260823126561913">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="956867835673687" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="6012395297094719" type="System">
+                                        <condition id="-22" name="Else" sid="655189463322361" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="7775449175779407" type="System">
                                             <param id="0" name="Variable">player</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">PLAYER2</param>
@@ -415,99 +472,143 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="481062078781661">
+                                        <event-block sid="4207883119811198">
                                             <conditions>
-                                                <condition id="-15" name="Pick nearest/furthest" sid="8668656114316823" type="RightBeat">
+                                                <condition behavior="Physics" id="4" inverted="1" name="Is enabled" sid="1508967462707153" type="RightBeat" />
+                                                <condition id="-15" name="Pick nearest/furthest" sid="6831902007637055" type="RightBeat">
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="X">Speaker.X</param>
                                                     <param id="2" name="Y">Speaker.Y</param>
                                                 </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="7942926272920415" type="RightBeat">
+                                                    <param id="0" name="Object">Ring</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="7132095273247971">
+                                                <event-block any="1" sid="3416418607159384">
                                                     <conditions>
-                                                        <condition id="1" name="Is overlapping another object" sid="3459797593631279" type="RightBeat">
-                                                            <param id="0" name="Object">Speaker</param>
+                                                        <condition id="-8" name="Compare two values" sid="2291911507846032" type="System">
+                                                            <param id="0" name="First value">abs(time-LAST_BEAT - 60/BPM)</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">BEAT_TOLERANCE</param>
                                                         </condition>
-                                                        <condition id="3" name="Compare frame" sid="3602019112291558" type="RightBeat">
-                                                            <param id="0" name="Comparison">0</param>
-                                                            <param id="1" name="Number">0</param>
+                                                        <condition id="-8" name="Compare two values" sid="685401635208881" type="System">
+                                                            <param id="0" name="First value">time-LAST_BEAT</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">BEAT_TOLERANCE</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="1" name="Set return value" sid="2783826118036901" type="Function">
-                                                            <param id="0" name="Value">1</param>
-                                                        </action>
-                                                        <action id="5" name="Set frame" sid="2976828502901805" type="RightBeat">
-                                                            <param id="0" name="Frame number">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
                                                     <sub-events>
-                                                        <event-block sid="8244850961498006">
-                                                            <conditions>
-                                                                <condition id="-14" name="Compare variable" sid="7239994293637998" type="System">
-                                                                    <param id="0" name="Variable">P2_POWER_ENABLED</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">1</param>
-                                                                </condition>
-                                                            </conditions>
+                                                        <event-block any="1" sid="2583369253553875">
+                                                            <conditions />
                                                             <actions>
-                                                                <action id="0" name="Call function" sid="8396935955918104" type="Function">
-                                                                    <param id="0" name="Name">&quot;addToColor&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                <action id="1" name="Set return value" sid="4340129247421436" type="Function">
+                                                                    <param id="0" name="Value">1</param>
                                                                 </action>
-                                                                <action id="0" name="Call function" sid="764274790316584" type="Function">
-                                                                    <param id="0" name="Name">&quot;releaseColor&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">PLAYER2{###}color</param>
+                                                                <action id="5" name="Set frame" sid="9361490420961477" type="RightBeat">
+                                                                    <param id="0" name="Frame number">color</param>
                                                                 </action>
-                                                                <action id="-9" name="Set value" sid="8573965928142807" type="System">
-                                                                    <param id="0" name="Variable">P2_POWER_ENABLED</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-10" name="Add to" sid="7263743044943806" type="System">
-                                                                    <param id="0" name="Variable">P2_CCCOMBO</param>
-                                                                    <param id="1" name="Value">HYPE_PER_WAVE</param>
+                                                                <action id="0" name="Call function" sid="9258291448625826" type="Function">
+                                                                    <param id="0" name="Name">&quot;animateToFill&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">RightBeat.UID{###}PLAYER2</param>
                                                                 </action>
                                                             </actions>
+                                                            <sub-events>
+                                                                <event-block any="1" sid="1815395335865421">
+                                                                    <conditions>
+                                                                        <condition id="3" name="Is button down" sid="8161754734753766" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER2</param>
+                                                                            <param id="1" name="Button">6</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="5451058730028975" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER2</param>
+                                                                            <param id="1" name="Button">7</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="777702574647443" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER2</param>
+                                                                            <param id="1" name="Button">12</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="6409036254978256" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER2</param>
+                                                                            <param id="1" name="Button">13</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="1248961399700663" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER2</param>
+                                                                            <param id="1" name="Button">14</param>
+                                                                        </condition>
+                                                                        <condition id="3" name="Is button down" sid="656753245040926" type="Gamepad">
+                                                                            <param id="0" name="Gamepad">PLAYER2</param>
+                                                                            <param id="1" name="Button">15</param>
+                                                                        </condition>
+                                                                        <condition id="2" name="Key is down" sid="3040966676166192" type="Keyboard">
+                                                                            <param id="0" name="Key">13 (Return)</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="4544368431346473" type="Function">
+                                                                            <param id="0" name="Name">&quot;addToColor&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                        </action>
+                                                                        <action id="0" name="Call function" sid="2630469427311615" type="Function">
+                                                                            <param id="0" name="Name">&quot;releaseColor&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">PLAYER2{###}color</param>
+                                                                        </action>
+                                                                        <action id="-9" name="Set value" sid="9126039855479399" type="System">
+                                                                            <param id="0" name="Variable">P2_POWER_ENABLED</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Add to" sid="5492849855696978" type="System">
+                                                                            <param id="0" name="Variable">P2_CCCOMBO</param>
+                                                                            <param id="1" name="Value">HYPE_PER_WAVE</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="3910203917073792">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="3442328996279063" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="1167056133525608" type="Function">
+                                                                            <param id="0" name="Name">&quot;newWave&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">PLAYER2{###}100{###}GREY</param>
+                                                                        </action>
+                                                                        <action id="0" name="Call function" sid="9388452022642411" type="Function">
+                                                                            <param id="0" name="Name">&quot;addToColor&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Add to" sid="533422168128382" type="System">
+                                                                            <param id="0" name="Variable">P2_CCCOMBO</param>
+                                                                            <param id="1" name="Value">HYPE_PER_BEAT</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
-                                                        <event-block sid="2623105953892591">
+                                                        <event-block sid="8993185465272106">
                                                             <conditions>
-                                                                <condition id="-22" name="Else" sid="7722215681334008" type="System" />
+                                                                <condition id="-22" name="Else" sid="245876711408733" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="0" name="Call function" sid="898837509642406" type="Function">
-                                                                    <param id="0" name="Name">&quot;newWave&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">PLAYER2{###}100{###}GREY</param>
+                                                                <action id="1" name="Set return value" sid="4350315632358638" type="Function">
+                                                                    <param id="0" name="Value">0</param>
                                                                 </action>
-                                                                <action id="0" name="Call function" sid="5215942211896488" type="Function">
-                                                                    <param id="0" name="Name">&quot;addToColor&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">player{###}color</param>
+                                                                <action behavior="Physics" id="27" name="Set enabled" sid="6073370468333643" type="RightBeat">
+                                                                    <param id="0" name="Mode">1</param>
                                                                 </action>
-                                                                <action id="-10" name="Add to" sid="9614513674785928" type="System">
+                                                                <action id="-11" name="Subtract from" sid="9365294331443858" type="System">
                                                                     <param id="0" name="Variable">P2_CCCOMBO</param>
-                                                                    <param id="1" name="Value">HYPE_PER_BEAT</param>
+                                                                    <param id="1" name="Value">HYPE_LOSS_PER_MISS</param>
+                                                                </action>
+                                                                <action behavior="Physics" id="3" name="Apply impulse" sid="6279211314420852" type="RightBeat">
+                                                                    <param id="0" name="Impulse X">0</param>
+                                                                    <param id="1" name="Implulse Y">5000</param>
+                                                                    <param id="2" name="Image point">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
-                                                </event-block>
-                                                <event-block sid="4134792099818843">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="2609146559870459" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="1" name="Set return value" sid="5707423419373738" type="Function">
-                                                            <param id="0" name="Value">0</param>
-                                                        </action>
-                                                        <action id="5" name="Set frame" sid="231922162244754" type="RightBeat">
-                                                            <param id="0" name="Frame number">2</param>
-                                                        </action>
-                                                        <action id="-11" name="Subtract from" sid="6650135296003783" type="System">
-                                                            <param id="0" name="Variable">P2_CCCOMBO</param>
-                                                            <param id="1" name="Value">HYPE_LOSS_PER_MISS</param>
-                                                        </action>
-                                                    </actions>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -520,65 +621,80 @@
             </sub-events>
         </event-block>
         <comment>Recieves player and color to release</comment>
-        <event-block sid="9096786562292311">
+        <event-block sid="246577934631462">
             <conditions>
-                <condition id="0" name="On function" sid="2194860213200749" type="Function">
+                <condition id="0" name="On function" sid="874650171926633" type="Function">
                     <param id="0" name="Name">&quot;releaseColor&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="player" sid="4740800766207881" static="0" type="number">0</variable>
-                <variable constant="0" name="color" sid="9929278115408964" static="0" type="number">0</variable>
-                <event-block sid="4661384883840867">
+                <variable constant="0" name="player" sid="788190419595952" static="0" type="number">0</variable>
+                <variable constant="0" name="color" sid="6632314038546099" static="0" type="number">0</variable>
+                <event-block sid="3465953046953422">
                     <conditions />
                     <actions>
-                        <action id="-9" name="Set value" sid="1326859790199773" type="System">
+                        <action id="-9" name="Set value" sid="2832401394141234" type="System">
                             <param id="0" name="Variable">player</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="9175505860632701" type="System">
+                        <action id="-9" name="Set value" sid="4227126752443636" type="System">
                             <param id="0" name="Variable">color</param>
                             <param id="1" name="Value">Function.Param(1)</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="7060553279219692">
+                        <event-block sid="8812179588361271">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="6534639722379369" type="System">
+                                <condition id="-8" name="Compare two values" sid="3788516962132921" type="System">
                                     <param id="0" name="First value">color</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Second value">3</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="176937818242577" type="LoadBar">
+                                <condition id="-7" name="Compare instance variable" sid="7833641133922389" type="LoadBar">
                                     <param id="0" name="Instance variable">color</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">color</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="3081470666110895" type="LoadBar">
+                                <condition id="-7" name="Compare instance variable" sid="9281209417101549" type="LoadBar">
                                     <param id="0" name="Instance variable">player</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">player</param>
                                 </condition>
-                                <condition id="1" name="Compare at XY" sid="9885180977191171" type="points">
+                                <condition id="1" name="Compare at XY" sid="3224479410891669" type="points">
                                     <param id="0" name="X">player</param>
                                     <param id="1" name="Y">color</param>
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7428224776344881" type="Player">
+                                    <param id="0" name="Instance variable">player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">player</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="6550728209444893" type="Function">
+                                <action id="0" name="Call function" sid="7217276800645864" type="Function">
                                     <param id="0" name="Name">&quot;newWave&quot;</param>
                                     <param id="1" name="Parameter {n}">player{###}25*points.At(player,color){###}color</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="5844080755569679" type="points">
+                                <action id="3" name="Set at XY" sid="1263610715050898" type="points">
                                     <param id="0" name="X">player</param>
                                     <param id="1" name="Y">color</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="4959209596595658" type="LoadBar">
+                                <action id="5" name="Set frame" sid="5677973116421466" type="LoadBar">
                                     <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="1646471641178719" type="Audio">
+                                    <param id="0" name="Audio file">crowd_cheer fadein</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">min(max((P1_CCCOMBO+P2_CCCOMBO)/2,0),14) -  10</param>
+                                    <param id="1" name="Tag (optional)">&quot;cheer&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9088350136166586" type="Player">
+                                    <param id="0" name="Animation">&quot;charge&quot; &amp; player</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -587,108 +703,209 @@
             </sub-events>
         </event-block>
         <comment>Keyboard controls player 1</comment>
-        <event-block sid="2529244210253096">
+        <event-block sid="9656170966659692">
             <conditions>
-                <condition id="0" name="On key pressed" sid="6408295353854277" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="6513020716706337" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="7831328162463314" type="Function">
+                <action id="0" name="Call function" sid="2838735069243607" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER1{###}BLUE</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1898369167052697">
+        <event-block sid="3808578708793145">
             <conditions>
-                <condition id="0" name="On key pressed" sid="568814995921201" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="2762766692822473" type="Keyboard">
                     <param id="0" name="Key">83 (S)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="1306552616695145" type="Function">
+                <action id="0" name="Call function" sid="4022372895056677" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER1{###}GREEN</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2889017663055557">
+        <event-block sid="660069323305325">
             <conditions>
-                <condition id="0" name="On key pressed" sid="8921110544405773" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="6016895789992084" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="206694934756695" type="Function">
+                <action id="0" name="Call function" sid="1023430614974386" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER1{###}RED</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3072698024140411">
+        <event-block sid="4090951521248948">
             <conditions>
-                <condition id="0" name="On key pressed" sid="6943637683801643" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="8247952648316245" type="Keyboard">
                     <param id="0" name="Key">32 (Space)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="7192108584257675" type="System">
+                <action id="-9" name="Set value" sid="2975780715177796" type="System">
                     <param id="0" name="Variable">P1_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
         <comment>Keyboard controls player 2</comment>
-        <event-block sid="5771877269882316">
+        <event-block sid="3294090237908941">
             <conditions>
-                <condition id="0" name="On key pressed" sid="8493190156524242" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="3896308851335048" type="Keyboard">
                     <param id="0" name="Key">74 (J)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="5503134401101399" type="Function">
+                <action id="0" name="Call function" sid="699918827343815" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER2{###}BLUE</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1514324035029505">
+        <event-block sid="4834370002740743">
             <conditions>
-                <condition id="0" name="On key pressed" sid="3176730914692284" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="2350885290258299" type="Keyboard">
                     <param id="0" name="Key">75 (K)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="9659815041996784" type="Function">
+                <action id="0" name="Call function" sid="7747953779520252" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER2{###}GREEN</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="441977437794791">
+        <event-block sid="6123926988841976">
             <conditions>
-                <condition id="0" name="On key pressed" sid="711606991312531" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="8609201557769485" type="Keyboard">
                     <param id="0" name="Key">76 (L)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="9157584571292242" type="Function">
+                <action id="0" name="Call function" sid="4328027240653708" type="Function">
                     <param id="0" name="Name">&quot;beatStrike&quot;</param>
                     <param id="1" name="Parameter {n}">PLAYER2{###}RED</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="694999287238482">
+        <event-block sid="5823498842655207">
             <conditions>
-                <condition id="0" name="On key pressed" sid="9571664442950797" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="5117441982494504" type="Keyboard">
                     <param id="0" name="Key">13 (Return)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="4285980663760281" type="System">
+                <action id="-9" name="Set value" sid="9771143656797655" type="System">
                     <param id="0" name="Variable">P2_POWER_ENABLED</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5230040282388195">
+            <conditions>
+                <condition id="0" name="On function" sid="7761959586777118" type="Function">
+                    <param id="0" name="Name">&quot;animateToFill&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="271490841832636">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="1818970585312692" type="Beat">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1300425932462961" type="powerFlechas">
+                            <param id="0" name="Instance variable">player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="9094888297361994" type="Beat">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="1671027629497967" type="Beat">
+                            <param id="0" name="Scale">0.7</param>
+                        </action>
+                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="7849973044678028" type="Beat">
+                            <param id="0" name="Impulse">5000</param>
+                            <param id="1" name="X">powerFlechas.x</param>
+                            <param id="2" name="Y">powerFlechas.Y</param>
+                            <param id="3" name="Image point">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="2001273915437585" type="Beat">
+                            <param id="0" name="Opacity">75</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2804888891982782">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7718346203306378" type="Beat">
+                    <param id="0" name="Object">powerFlechas</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1185410690669244" type="Beat" />
+            </actions>
+        </event-block>
+        <event-block sid="3690689782479126">
+            <conditions>
+                <condition id="4" name="On finished" sid="425185292271589" type="Player">
+                    <param id="0" name="Animation">&quot;charge0&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7831299306276166" type="Player">
+                    <param id="0" name="Animation">&quot;idle&quot; &amp; PLAYER.player</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7939969004172214">
+            <conditions>
+                <condition id="4" name="On finished" sid="3529041795983877" type="Player">
+                    <param id="0" name="Animation">&quot;charge1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2144485569271134" type="Player">
+                    <param id="0" name="Animation">&quot;idle&quot; &amp; PLAYER.player</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3402243287819885">
+            <conditions>
+                <condition id="4" name="On finished" sid="8511850171340224" type="Player">
+                    <param id="0" name="Animation">&quot;hurt0&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2755125864864497" type="Player">
+                    <param id="0" name="Animation">&quot;idle&quot; &amp; PLAYER.player</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="703272303039378">
+            <conditions>
+                <condition id="4" name="On finished" sid="12728805033528" type="Player">
+                    <param id="0" name="Animation">&quot;hurt1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3671173239501215" type="Player">
+                    <param id="0" name="Animation">&quot;idle&quot; &amp; PLAYER.player</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

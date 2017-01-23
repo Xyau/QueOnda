@@ -4,8 +4,8 @@
     <name>Constants</name>
     <events>
         <event-group description="" sid="703030546106101" title="COLISION" />
-        <variable constant="1" name="WINBONUS" sid="2973138580865081" static="0" type="number">0.2</variable>
-        <variable constant="1" name="WINBONUSBYLANDSLIDE" sid="4707202127396691" static="0" type="number">0.8</variable>
+        <variable constant="1" name="WINBONUS" sid="2973138580865081" static="0" type="number">0.35</variable>
+        <variable constant="1" name="WINBONUSBYLANDSLIDE" sid="4707202127396691" static="0" type="number">0.85</variable>
         <variable constant="1" name="FIRST" sid="8820065561625052" static="0" type="number">1</variable>
         <variable constant="1" name="FIRSTBYLANDSLIDE" sid="5713490385428123" static="0" type="number">2</variable>
         <variable constant="1" name="SECOND" sid="260458182461569" static="0" type="number">-1</variable>
@@ -17,8 +17,8 @@
         <variable constant="1" name="BLUE" sid="9655305097666633" static="0" type="number">2</variable>
         <variable constant="1" name="GREY" sid="2055420662457843" static="0" type="number">3</variable>
         <event-group description="" sid="2969919983789248" title="WAVE" />
-        <variable constant="1" name="WAVEVELOCITY" sid="2780411750819717" static="0" type="number">8</variable>
-        <variable constant="1" name="WAVELENGTH" sid="4494662409655319" static="0" type="number">6</variable>
+        <variable constant="1" name="WAVEVELOCITY" sid="2780411750819717" static="0" type="number">7</variable>
+        <variable constant="1" name="WAVELENGTH" sid="4494662409655319" static="0" type="number">3</variable>
         <event-group description="" sid="4396092792591215" title="POSITIONS" />
         <variable constant="1" name="ORIGINP1" sid="9973346211508357" static="0" type="number">200</variable>
         <variable constant="1" name="ORIGINP2" sid="9499454010281568" static="0" type="number">1700</variable>
@@ -26,20 +26,27 @@
         <variable constant="1" name="PLAYER1" sid="8667300325407529" static="0" type="number">0</variable>
         <variable constant="1" name="PLAYER2" sid="2162649524051205" static="0" type="number">1</variable>
         <variable constant="1" name="SPRITEWIDTH" sid="9772186554916382" static="0" type="number">2</variable>
-        <variable constant="1" name="ROPELENGTH" sid="6890636687359277" static="0" type="number">1500</variable>
+        <variable constant="1" name="ROPELENGTH" sid="6890636687359277" static="0" type="number">1300</variable>
         <event-group description="" sid="5315450133731589" title="BEATS" />
         <variable constant="1" name="BPM" sid="7930822123148874" static="0" type="number">120</variable>
-        <variable constant="1" name="BEATS_PER_LIGHTS" sid="669358042340912" static="0" type="number">2</variable>
-        <variable constant="1" name="BEAT_TRAVEL_DISTANCE" sid="5537915438286207" static="0" type="number">300</variable>
+        <variable constant="1" name="BEAT_TOLERANCE" sid="6616631738083723" static="0" type="number">0.13</variable>
+        <variable constant="1" name="BEATS_PER_LIGHTS" sid="7074892753759426" static="0" type="number">2</variable>
+        <variable constant="1" name="BEATS_OFFSET" sid="5352375085148297" static="0" type="number">70</variable>
+        <variable constant="1" name="BEAT_TRAVEL_DISTANCE" sid="5537915438286207" static="0" type="number">900</variable>
         <variable constant="1" name="BEAT_SECONDS_TO_TAP" sid="7001184841957489" static="0" type="number">1</variable>
-        <event-group description="" sid="8609687341759171" title="CROWD" />
-        <variable constant="1" name="CROWD_EUPHORIC_THRESHOLD" sid="2294090765552575" static="0" type="number">10</variable>
-        <variable constant="1" name="CROWD_UNHAPPY_THRESHOLD" sid="8965624871104201" static="0" type="number">-3</variable>
-        <variable constant="1" name="CROWD_MAX_JUMP" sid="4879753239987592" static="0" type="number">60</variable>
-        <variable constant="1" name="CROWD_HYPE_DECAY" sid="812154924785147" static="0" type="number">3</variable>
-        <variable constant="1" name="HYPE_PER_BEAT" sid="4796017820339139" static="0" type="number">1</variable>
-        <variable constant="1" name="HYPE_PER_WAVE" sid="4151786982998017" static="0" type="number">3</variable>
-        <variable constant="1" name="HYPE_LOSS_PER_MISS" sid="3680722339236867" static="0" type="number">2</variable>
         <variable constant="1" name="MAXIMUNBEATS" sid="4966453010449314" static="0" type="number">10</variable>
+        <variable constant="1" name="YROPE" sid="1120097588686683" static="0" type="number">500</variable>
+        <variable constant="1" name="YROPE2" sid="2036810787256168" static="0" type="number">500</variable>
+        <variable constant="1" name="SPEAKERS_CHANGE" sid="9103279901697683" static="0" type="number">2</variable>
+        <event-group description="" sid="7852576453540564" title="CROWD" />
+        <variable constant="1" name="CROWD_EUPHORIC_THRESHOLD" sid="5595709221701071" static="0" type="number">10</variable>
+        <variable constant="1" name="CROWD_UNHAPPY_THRESHOLD" sid="536353923469957" static="0" type="number">-3</variable>
+        <variable constant="1" name="CROWD_MAX_JUMP" sid="3035253025094872" static="0" type="number">60</variable>
+        <variable constant="1" name="CROWD_HYPE_DECAY" sid="2976909987476978" static="0" type="number">3</variable>
+        <variable constant="1" name="HYPE_PER_BEAT" sid="8414063337407825" static="0" type="number">1</variable>
+        <variable constant="1" name="HYPE_PER_WAVE" sid="5548707852640202" static="0" type="number">3</variable>
+        <variable constant="1" name="HYPE_LOSS_PER_MISS" sid="5128603355560402" static="0" type="number">2</variable>
+        <event-group description="" sid="8609687341759171" title="STATES" />
+        <variable constant="0" name="SENDBEATS" sid="6241766221749609" static="0" type="number">0</variable>
     </events>
 </c2eventsheet>

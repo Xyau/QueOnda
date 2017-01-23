@@ -4,6 +4,7 @@
     <name>Wave</name>
     <events>
         <variable constant="0" name="whoWon" sid="8853127563185364" static="0" type="number">0</variable>
+        <variable constant="0" name="winner" sid="264099567046397" static="0" type="number">0</variable>
         <comment>Wave Coliding</comment>
         <event-block sid="6344625812342929">
             <conditions>
@@ -63,9 +64,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="1931731184338984" type="System">
-                                    <param id="0" name="Variable">power2</param>
-                                    <param id="1" name="Value">WINBONUS * power2</param>
+                                <action id="-11" name="Subtract from" sid="1931731184338984" type="System">
+                                    <param id="0" name="Variable">power1</param>
+                                    <param id="1" name="Value">WINBONUS * power1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -478,6 +479,115 @@
                                 <action id="-10" name="Set value" sid="2218926306063272" type="waveP2">
                                     <param id="0" name="Instance variable">v</param>
                                     <param id="1" name="Value">-WAVEVELOCITY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4432379135850789">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="2897219480271839" type="waveP1">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">ORIGINP2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8465140164955347" type="Function">
+                    <param id="0" name="Name">&quot;hitPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}">PLAYER2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1229580123108168">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3488699145078584" type="waveP2">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">ORIGINP1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="7231939651173775" type="Function">
+                    <param id="0" name="Name">&quot;hitPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}">PLAYER1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Recieves Which Player</comment>
+        <event-block sid="2486406552024393">
+            <conditions>
+                <condition id="0" name="On function" sid="7331337320887947" type="Function">
+                    <param id="0" name="Name">&quot;hitPlayer&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="player" sid="2749012886937794" static="0" type="number">0</variable>
+                <event-block sid="1375431144059384">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="9872117300649084" type="System">
+                            <param id="0" name="Variable">player</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3569211906714848" type="Wave" />
+                        <action id="5" name="Set frame" sid="639048416371116" type="Sprite">
+                            <param id="0" name="Frame number">GREY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1409811838263272">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4357568659195327" type="Player">
+                            <param id="0" name="Instance variable">player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">player</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7411591646599598" type="live">
+                            <param id="0" name="Instance variable">player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">player</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4666140767542091" type="live">
+                            <param id="0" name="Instance variable">live</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">player.lives</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="283403151944837" type="Player">
+                            <param id="0" name="Instance variable">lives</param>
+                            <param id="1" name="Value">player.lives -1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2829067726231167" type="live" />
+                        <action id="0" name="Play" sid="1037017701431921" type="Audio">
+                            <param id="0" name="Audio file">broken string</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9097806825155337" type="Player">
+                            <param id="0" name="Animation">&quot;hurt&quot; &amp; player.player</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4944257482004283">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7435993099630964" type="Player">
+                                    <param id="0" name="Instance variable">lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8817892465968285" type="System">
+                                    <param id="0" name="Variable">winner</param>
+                                    <param id="1" name="Value">player</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="5624876007129904" type="System">
+                                    <param id="0" name="Layout">Results</param>
                                 </action>
                             </actions>
                         </event-block>

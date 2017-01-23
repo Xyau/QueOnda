@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Launcher</name>
+    <events>
+        <event-block sid="6844868201492433">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5119094070143239" type="System" />
+            </conditions>
+            <actions>
+                <action id="9" name="Preload (by name)" sid="3970972533793711" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;intro&quot;</param>
+                </action>
+                <action id="33" name="Stop all" sid="1944877391945374" type="Audio" />
+                <action id="0" name="Play" sid="2557245296075426" type="Audio">
+                    <param id="0" name="Audio file">intro</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1102976198165757">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8137654103652424" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">StartButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2300414005056873" type="Buttons">
+                    <param id="0" name="Instance variable">selected</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="649407226747477" type="StartButton">
+                    <param id="0" name="Instance variable">selected</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="9953514523924171" type="StartButton">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="1109790511637088" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="5" name="Set frame" sid="8976857417958633" type="StartButton">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="677916952809683" type="System">
+                    <param id="0" name="Layout">Setup</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8811682297078005">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9405132076941262" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">CreditsButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5086170514782464" type="Buttons">
+                    <param id="0" name="Instance variable">selected</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="9648474577164129" type="CreditsButton">
+                    <param id="0" name="Instance variable">selected</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="5016920723817924" type="CreditsButton">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6785153575885903" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="5" name="Set frame" sid="5216306860418153" type="CreditsButton">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="1673471470611542" type="System">
+                    <param id="0" name="Layout">Credits</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="7357819864069578">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="2198790430417757" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">15</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="3182149480928209" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">14</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="4786651714467315" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">-75</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="1559086638234149" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">75</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="8884834210871369" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="4982947615416981" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5733777242138246">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8536953019327828" type="StartButton">
+                            <param id="0" name="Instance variable">selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9383010692005824" type="Buttons">
+                            <param id="0" name="Instance variable">selected</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4941920342042034" type="CreditsButton">
+                            <param id="0" name="Instance variable">selected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="8911819722604304" type="CreditsButton">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="494963920362045" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5900520782731616">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3373751293121779" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1200125613745273" type="Buttons">
+                            <param id="0" name="Instance variable">selected</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1019609282988726" type="StartButton">
+                            <param id="0" name="Instance variable">selected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="1266501279844604" type="StartButton">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8311407886715999" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7630177242620603">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4279200507340653" type="Buttons">
+                    <param id="0" name="Instance variable">selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="2831043857274746" type="Buttons">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="9588718080599201">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="5021893935428253" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="7774383081123027" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="6724738606961172" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="601645605168044">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="429979567104701" type="StartButton">
+                            <param id="0" name="Instance variable">selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="5107619993194619" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="9626404043107201" type="StartButton">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="7206030120399857" type="System">
+                            <param id="0" name="Layout">Setup</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2002516429748175">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9153892677961373" type="CreditsButton">
+                            <param id="0" name="Instance variable">selected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="5220594169100545" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="1670485706551615" type="StartButton">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="4503293764189598" type="System">
+                            <param id="0" name="Layout">Credits</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5257292683738657">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="6639979058844249" type="System" />
+                <condition id="3" name="Compare frame" sid="2240587342199544" type="gameJamSpalshScreen">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2878854926772675" type="CreditsButton">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1649422114723216" type="StartButton">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

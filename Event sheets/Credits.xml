@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Credits</name>
+    <events>
+        <event-block sid="5370070877695715">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9063065349411141" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="9636734493607581" type="Audio">
+                    <param id="0" name="Audio file">StonHengeLoop2</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="7989123473139029">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="7666942392438485" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="8858932856448894" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="1425903594354217" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="0" name="On click" sid="6017442733654395" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7747771563006337">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="2331157927723608" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="5536128649817275" type="MenuButton">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="7816367916748924" type="System">
+                            <param id="0" name="Layout">Launcher</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1628408651609001">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="7648627801244154" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="4313101717943777" type="Audio" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

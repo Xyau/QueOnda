@@ -43,7 +43,7 @@
                         <y>164</y>
                         <z>0</z>
                         <width>10</width>
-                        <height>20</height>
+                        <height>10</height>
                         <depth>0</depth>
                         <hotspotX>0.699999988</hotspotX>
                         <hotspotY>0.699999988</hotspotY>
@@ -109,23 +109,39 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>3</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <direction>1</direction>
                         <born>0</born>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Circle</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>684</x>
                         <y>400</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>100</height>
+                        <width>113.964912415</width>
+                        <height>110.035087585</height>
                         <depth>0</depth>
-                        <hotspotX>0.465116292</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -135,29 +151,45 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>3</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
                         <direction>-1</direction>
                         <born>0</born>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Circle</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1132.5</x>
                         <y>491.5</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>100</height>
+                        <width>114.973449707</width>
+                        <height>111.008850098</height>
                         <depth>0</depth>
-                        <hotspotX>0.465116292</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LeftCrowd" uid="20">
+                <instance type="RightCrowd" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -167,8 +199,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>368</x>
-                        <y>551</y>
+                        <x>288</x>
+                        <y>316</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -179,7 +211,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RightCrowd" uid="21">
+                <instance type="LeftCrowd" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -189,11 +221,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>291</x>
-                        <y>228</y>
+                        <x>469</x>
+                        <y>643</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>420</width>
+                        <height>460</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -201,24 +233,21 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Filter" uid="22">
+                <instance type="Speaker" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>861</x>
-                        <y>691</y>
+                        <x>1390</x>
+                        <y>113</y>
                         <z>0</z>
-                        <width>252</width>
-                        <height>252</height>
+                        <width>112</width>
+                        <height>112</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

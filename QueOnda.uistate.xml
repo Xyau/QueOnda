@@ -10,21 +10,35 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Layout 1</layout>
-        <event-sheet order="1">Controls</event-sheet>
-        <event-sheet order="2">Constants</event-sheet>
-        <event-sheet active="1" order="3">Beat</event-sheet>
+        <layout order="0">Setup</layout>
+        <layout order="5">Results</layout>
+        <layout order="6">Launcher</layout>
+        <layout order="7">Main</layout>
+        <layout order="13">Credits</layout>
+        <layout active="1" order="14">Splashs</layout>
+        <event-sheet order="1">Setup</event-sheet>
+        <event-sheet order="2">Credits</event-sheet>
+        <event-sheet order="3">Launcher</event-sheet>
+        <event-sheet order="4">Wave</event-sheet>
+        <event-sheet order="8">Beat</event-sheet>
+        <event-sheet order="9">Audio</event-sheet>
+        <event-sheet order="10">Controls</event-sheet>
+        <event-sheet order="11">Main</event-sheet>
+        <event-sheet order="12">Particles</event-sheet>
+        <event-sheet order="15">Splashs</event-sheet>
+        <event-sheet order="16">Results</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
         <family expanded="0" name="Wave" />
-        <family expanded="0" name="Beat" />
-        <family expanded="0" name="Crowds" />
+        <family expanded="1" name="Beat" />
+        <family expanded="1" name="Crowds" />
+        <family expanded="1" name="Buttons" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -33,7 +47,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/waveP1/" />
         <folder expanded="1" path="animation-folder/waveP2/" />
@@ -41,8 +55,28 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LeftBeat/" />
         <folder expanded="1" path="animation-folder/RightBeat/" />
         <folder expanded="1" path="animation-folder/LoadBar/" />
-        <folder expanded="1" path="animation-folder/LeftCrowd/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/live/" />
         <folder expanded="1" path="animation-folder/RightCrowd/" />
+        <folder expanded="1" path="animation-folder/LeftCrowd/" />
         <folder expanded="1" path="animation-folder/Filter/" />
+        <folder expanded="1" path="animation-folder/Background/" />
+        <folder expanded="1" path="animation-folder/powerFlechas/" />
+        <folder expanded="1" path="animation-folder/powerBase/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Hints/" />
+        <folder expanded="1" path="animation-folder/Ring/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/StartButton/" />
+        <folder expanded="1" path="animation-folder/CreditsButton/" />
+        <folder expanded="1" path="animation-folder/MenuButton/" />
+        <folder expanded="1" path="animation-folder/RockButton/" />
+        <folder expanded="1" path="animation-folder/LoserDecoration/" />
+        <folder expanded="1" path="animation-folder/RematchButton/" />
+        <folder expanded="1" path="animation-folder/WinnerDecoration/" />
+        <folder expanded="1" path="animation-folder/GameOverSprite/" />
+        <folder expanded="1" path="animation-folder/Screen/" />
+        <folder expanded="1" path="animation-folder/gameJamSpalshScreen/" />
+        <folder expanded="1" path="animation-folder/Splash/" />
     </folders-expanded>
 </c2uistate>

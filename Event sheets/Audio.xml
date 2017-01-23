@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Audio</name>
+    <events>
+        <variable constant="0" name="ONLY_ONCE_PLAY" sid="9889674206177212" static="0" type="number">0</variable>
+        <event-block sid="2971906208320725">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="332153168159418" type="System">
+                    <param id="0" name="Interval (seconds)">60/BPM</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3886239315493489" type="System">
+                    <param id="0" name="Variable">ONLY_ONCE_PLAY</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="5559411314061516" type="Audio" />
+                <action id="0" name="Play" sid="895714391990651" type="Audio">
+                    <param id="0" name="Audio file">cowbell</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;cowbell&quot;</param>
+                </action>
+                <action id="4" name="Preload" sid="1166708307681583" type="Audio">
+                    <param id="0" name="Audio file">miss</param>
+                </action>
+                <action id="4" name="Preload" sid="7703699850419751" type="Audio">
+                    <param id="0" name="Audio file">level song</param>
+                </action>
+                <action id="4" name="Preload" sid="6576854697304673" type="Audio">
+                    <param id="0" name="Audio file">crowd_cheer fadein</param>
+                </action>
+                <action id="-9" name="Set value" sid="782247351948715" type="System">
+                    <param id="0" name="Variable">ONLY_ONCE_PLAY</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4551832687777263">
+            <conditions>
+                <condition id="0" name="On ended" sid="6878426557549894" type="Audio">
+                    <param id="0" name="Tag">&quot;cowbell&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5620624632813377" type="Audio">
+                    <param id="0" name="Audio file">level song</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="2547875347064634" type="System">
+                    <param id="0" name="Variable">SENDBEATS</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="6274120018636031" type="Audio">
+                    <param id="0" name="Audio file">crowd_cheer fadein</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">3</param>
+                    <param id="1" name="Tag (optional)">&quot;cheer&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

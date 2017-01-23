@@ -12,13 +12,16 @@
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
     </used-behaviors>
     <used-effects />
@@ -31,6 +34,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Splashs</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -52,10 +56,54 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7517357510030916" speed="0">
-                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Julian Benitez\Pictures\GGJ\greenBall.png" />
-                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Julian Benitez\Pictures\GGJ\redBall.png" />
-                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Julian Benitez\Pictures\GGJ\blueBall.png" />
-                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Julian Benitez\Pictures\GGJ\blackBall.png" />
+                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\greenDot.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8" y="0.8" />
+                            <point x="0.5" y="1" />
+                            <point x="0.2" y="0.8" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\redDot.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8" y="0.8" />
+                            <point x="0.5" y="1" />
+                            <point x="0.2" y="0.8" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\blueDot.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8" y="0.8" />
+                            <point x="0.5" y="1" />
+                            <point x="0.2" y="0.8" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.7" hotspotY="0.7" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\blackDOt.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8" y="0.8" />
+                            <point x="0.5" y="1" />
+                            <point x="0.2" y="0.8" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -91,8 +139,8 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8684436393983741" speed="2">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\parlante.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\parlante2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\runaGenerica.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -102,20 +150,22 @@
         <object-type name="LeftBeat" sid="7686192856083017">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6020422074969052" speed="0">
-                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6020422074969052" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\runaGenerica.png" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="RightBeat" sid="4322733585572825">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4780827049474921" speed="0">
-                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.465116" hotspotY="0.5" />
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4780827049474921" speed="0">
+                    <frame duration="1" hotspotX="0.504425" hotspotY="0.504425" />
+                    <frame duration="1" hotspotX="0.504425" hotspotY="0.504425" />
+                    <frame duration="1" hotspotX="0.504425" hotspotY="0.504425" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\runaGenerica.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -133,76 +183,462 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="11" loop="0" name="Green" pingpong="0" repeatcount="1" repeatto="0" sid="4979703739346405" speed="0">
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="11" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="3776567500918773" speed="0">
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="11" loop="0" name="Blue" pingpong="0" repeatcount="1" repeatto="0" sid="4810394068058949" speed="0">
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type global="1" name="storedX" sid="7580306479724599">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="LeftCrowd" sid="1129387485143334">
+        <object-type name="GAMEOVER" sid="5419869026864504">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Player" sid="3883173019825818">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="player" sid="6763533854144955" type="number" />
+                <instance-variable name="lives" sid="460418099621602" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="7" loop="1" name="idle0" pingpong="0" repeatcount="1" repeatto="0" sid="6767455217080812" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\LOOP\8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\LOOP\9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\LOOP\10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\LOOP\11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\LOOP\12.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\LOOP\13.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\LOOP\14.png" />
+                </animation>
+                <animation framecount="6" loop="1" name="idle1" pingpong="0" repeatcount="1" repeatto="0" sid="8794512645468031" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\LOOP\8.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\LOOP\9.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\LOOP\10.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\LOOP\11.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\LOOP\12.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\LOOP\13.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="hurt0" pingpong="0" repeatcount="1" repeatto="0" sid="7980029975352088" speed="0.8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\HIT_CHAR_1.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="hurt1" pingpong="0" repeatcount="1" repeatto="0" sid="7874799308932413" speed="0.8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\HIT_CHAR_2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="charge1" pingpong="0" repeatcount="1" repeatto="0" sid="6375986778516525" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\PREPARA_SHOOT\1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\PREPARA_SHOOT\2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\PREPARA_SHOOT\3.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\PREPARA_SHOOT\4.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\PREPARA_SHOOT\5.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\PREPARA_SHOOT\6.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_2\PREPARA_SHOOT\7.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="charge0" pingpong="0" repeatcount="1" repeatto="0" sid="5780408762946751" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\PRERARA_SHOOT\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\PRERARA_SHOOT\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\PRERARA_SHOOT\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\PRERARA_SHOOT\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\PRERARA_SHOOT\5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\PRERARA_SHOOT\6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ANIMA_CHAR_1\PRERARA_SHOOT\7.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="live" sid="9524575808744187">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="player" sid="2197537424468559" type="number" />
+                <instance-variable name="live" sid="1676240080468664" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7536821790436701" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Juan Franco\Desktop\beat1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Juan Franco\Desktop\beat2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightCrowd" sid="8281354114775853">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1404082070164869" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2470243758063852" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="RightCrowd" sid="4646127646004276">
+        <object-type name="LeftCrowd" sid="56425066101703">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480982221432708" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="61839369307541" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\publicoFeliz.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\publicoMolesto.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\publicoNeutro.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Filter" sid="6588925028734243">
+        <object-type name="Filter" sid="9749602963719014">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Timer" sid="4754166461740693">
+                <behavior-type name="Timer" sid="6658873309552285">
                     <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7881054132719027" speed="0">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="624678854039859" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background" sid="5374119388106746">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6999482217614302" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\Fondo1.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\fondo2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="asda" pingpong="0" repeatcount="1" repeatto="0" sid="4528194290206469" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Downloads\tutoScreen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="powerFlechas" sid="8117092678959389">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="player" sid="8486286212736109" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2197902667525158" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\powerFlechas.png">
+                        <collision-poly>
+                            <point x="0.644068" y="0.703704" />
+                            <point x="0.5" y="0.037037" />
+                            <point x="0.305085" y="0.5" />
+                            <point x="0.762712" y="0.740741" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.254237" y="0.722222" />
+                            <point x="0.135593" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="powerBase" sid="9595570612086873">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2177005494768101" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Juan Franco\Dropbox\GGJ 2016\powerBase.png">
+                        <collision-poly>
+                            <point x="0.0677966" y="0.0740741" />
+                            <point x="0.5" y="0.037037" />
+                            <point x="0.932203" y="0.0740741" />
+                            <point x="0.881356" y="0.5" />
+                            <point x="0.762712" y="0.740741" />
+                            <point x="0.5" y="1" />
+                            <point x="0.237288" y="0.740741" />
+                            <point x="0.135593" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="9225880779498139">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1212210812955738" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\runaAnillo.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Hints" sid="3731287183823825">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4563188638010166" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ring" sid="9938730387719396">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="player" sid="218664888179332" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7977131546180453" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\runaAnillo2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button" sid="1882422495978401">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Sprite3" sid="4459906868617562">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9834218947633506" speed="5">
+                    <frame duration="1" hotspotX="0.14" hotspotY="1.636" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StartButton" sid="8763508707360181">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4475261178029042" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\UI\setartSelected.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\setartSelected.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CreditsButton" sid="4853113121066676">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5465071647083265" speed="5">
+                    <frame duration="1" hotspotX="0.502008" hotspotY="0.506667" original-source="C:\Users\Julian Benitez\Pictures\GGJ\UI\creditsSeleted.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\creditsSeleted.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MenuButton" sid="3870220279840386">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9311751197896223" speed="0">
+                    <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\UI\menuSelected.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\menuSelected.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RockButton" sid="6492484328174082">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2492813664000513" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\rock.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\rockSelected.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoserDecoration" sid="8940550532626625">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3226631623697841" speed="0">
+                    <frame duration="1" hotspotX="-0.895833" hotspotY="0.309353" original-source="C:\Users\Julian Benitez\Pictures\GGJ\UI\loser.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RematchButton" sid="7446800623810449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4499406913519982" speed="0">
+                    <frame duration="1" hotspotX="0.501695" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\UI\rematchSelected.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\rematchSelected.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WinnerDecoration" sid="7447627881179027">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7437255891283719" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\UI\winner.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="8938319756804048">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="GameOverSprite" sid="3044233065918791">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8696218909875134" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\gameOver.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Screen" sid="8134479222575481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2654548357308499" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\Screens\creditsScreen.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\Screens\gameJamSpalshScreen.jpg" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\Screens\StartScreen.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\Screens\studioLogoScreen.png" />
+                </animation>
+                <animation framecount="3" loop="0" name="ani" pingpong="0" repeatcount="1" repeatto="0" sid="3289485457837633" speed="1">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameJamSpalshScreen" sid="5589453476685409">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7990441391156138" speed="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\Screens\StartScreen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Splash" sid="3537384196473957">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="any" pingpong="0" repeatcount="1" repeatto="0" sid="9749443978712549" speed="0.5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\Screens\gameJamSpalshScreen.jpg" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Pictures\GGJ\ASSETS\UI\Screens\studioLogoScreen.png" />
+                    <frame duration="3" hotspotX="0" hotspotY="0" original-source="C:\Users\Julian Benitez\Downloads\history.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -228,17 +664,39 @@
                 <instance-variable name="direction" sid="7799359630345535" type="number" />
                 <instance-variable name="born" sid="8098814826948509" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="48354222133587">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
         </family>
-        <family name="Crowds" plugin-id="Sprite" sid="6306240055898185">
+        <family name="Crowds" plugin-id="Sprite" sid="8824446922053499">
             <members>
                 <member>LeftCrowd</member>
                 <member>RightCrowd</member>
             </members>
         </family>
+        <family name="Buttons" plugin-id="Sprite" sid="5332638759700604">
+            <members>
+                <member>CreditsButton</member>
+                <member>MenuButton</member>
+                <member>RematchButton</member>
+                <member>RockButton</member>
+                <member>StartButton</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="selected" sid="8429384307145279" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Main.xml</layout>
         <layout>Objects.xml</layout>
+        <layout>Results.xml</layout>
+        <layout>Launcher.xml</layout>
+        <layout>Setup.xml</layout>
+        <layout>Credits.xml</layout>
+        <layout>Splashs.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
@@ -247,6 +705,12 @@
         <event-sheet>Particles.xml</event-sheet>
         <event-sheet>Beat.xml</event-sheet>
         <event-sheet>Controls.xml</event-sheet>
+        <event-sheet>Audio.xml</event-sheet>
+        <event-sheet>Launcher.xml</event-sheet>
+        <event-sheet>Setup.xml</event-sheet>
+        <event-sheet>Credits.xml</event-sheet>
+        <event-sheet>Results.xml</event-sheet>
+        <event-sheet>Splashs.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="8" />
@@ -270,10 +734,25 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="61" />
     </global-instances>
     <sounds-folder>
         <file name="pistas_juntas.m4a" />
         <file name="pistas_juntas.ogg" />
+        <file name="cowbell.m4a" />
+        <file name="cowbell.ogg" />
+        <file name="miss.m4a" />
+        <file name="miss.ogg" />
+        <file name="broken string.m4a" />
+        <file name="broken string.ogg" />
+        <file name="crowd_cheer fadein.m4a" />
+        <file name="crowd_cheer fadein.ogg" />
+        <file name="intro.m4a" />
+        <file name="intro.ogg" />
+        <file name="level song.m4a" />
+        <file name="level song.ogg" />
+        <file name="StonHengeLoop2.m4a" />
+        <file name="StonHengeLoop2.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
